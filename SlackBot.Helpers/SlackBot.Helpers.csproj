@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HttpSlackBot\HttpSlackBot.csproj" />
+    <ProjectReference Include="..\SlackBot\SlackBot.csproj" />
   </ItemGroup>
 
 </Project>

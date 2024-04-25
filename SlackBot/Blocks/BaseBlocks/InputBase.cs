@@ -13,7 +13,7 @@ namespace HttpSlackBot.Blocks.BaseBlocks
 
         public override string Type => BlockTypes.Input;
         [JsonProperty("label")]
-        public virtual TextAttribute Label { get; } = new TextAttribute(TextTypes.Plain, true);
+        public virtual TextAttribute Label { get; } = new TextAttribute(TextType.Plain.ConvertToString(), true);
         [JsonProperty("element")]
         public abstract BlockBase Element { get; }
     }

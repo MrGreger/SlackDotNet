@@ -2,11 +2,20 @@ using HttpSlackBot.Blocks.Dialog;
 
 namespace HttpSlackBot.Blocks.Builders
 {
-    public class ConfirmationDialogBuilder
+    public interface IConfirmationDialog
+    {
+        IConfirmationDialog WithTitle(string title, bool emoji = true);
+        IConfirmationDialog WithText(string text, bool emoji = true);
+        IConfirmationDialog WithConfirm(string confirmText, bool emoji = true);
+        IConfirmationDialog WithDeny(string denyText, bool emoji = true);
+        IConfirmationDialog WithStyle(string style);
+    }
+    
+    public class ConfirmationDialogBuilder : IConfirmationDialog
     {
         private ConfirmationDialog _confirmationDialog = new ConfirmationDialog();
 
-        public ConfirmationDialogBuilder WithTitle(string title, bool emoji = true)
+        public IConfirmationDialog WithTitle(string title, bool emoji = true)
         {
             _confirmationDialog.Title = new PlainText(emoji)
             {
@@ -15,7 +24,7 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public ConfirmationDialogBuilder WithText(string text, bool emoji = true)
+        public IConfirmationDialog WithText(string text, bool emoji = true)
         {
             _confirmationDialog.Text = new PlainText(emoji)
             {
@@ -24,7 +33,7 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public ConfirmationDialogBuilder WithConfirm(string confirmText, bool emoji = true)
+        public IConfirmationDialog WithConfirm(string confirmText, bool emoji = true)
         {
             _confirmationDialog.Confirm = new PlainText(emoji)
             {
@@ -33,7 +42,7 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public ConfirmationDialogBuilder WithDeny(string denyText, bool emoji = true)
+        public IConfirmationDialog WithDeny(string denyText, bool emoji = true)
         {
             _confirmationDialog.Deny = new PlainText(emoji)
             {
@@ -42,7 +51,7 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public ConfirmationDialogBuilder WithStyle(string style)
+        public IConfirmationDialog WithStyle(string style)
         {
             _confirmationDialog.Style = style;
             return this;

@@ -10,7 +10,7 @@ namespace HttpSlackBot.Blocks
     {
         public PlainTextSection(bool withEmoji)
         {
-            Text = new TextAttribute(TextTypes.Plain, withEmoji);
+            Text = new TextAttribute(TextType.Plain.ConvertToString(), withEmoji);
         }
 
         public PlainTextSection(string text, bool withEmoji = false) : this(withEmoji)

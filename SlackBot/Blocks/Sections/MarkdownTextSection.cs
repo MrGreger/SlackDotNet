@@ -10,7 +10,7 @@ namespace HttpSlackBot.Blocks
     {
         public MarkdownTextSection(bool withEmoji)
         {
-            Text = new TextAttribute(TextTypes.Markdown, withEmoji);
+            Text = new TextAttribute(TextType.Markdown.ConvertToString(), withEmoji);
         }
 
         public override string Type => BlockTypes.Section;

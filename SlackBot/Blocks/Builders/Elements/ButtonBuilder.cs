@@ -3,7 +3,20 @@ using HttpSlackBot.Blocks.Dialog;
 
 namespace HttpSlackBot.Blocks.Builders
 {
-    public class ButtonBuilder
+    public interface IButtonConfigurator
+    {
+        IButtonConfigurator WithText(string text);
+        IButtonConfigurator WithPayload(string payload);
+        IButtonConfigurator WithActionId(string actionId);
+        IButtonConfigurator WithUrl(string url);
+        IButtonConfigurator WithStyle(string style);
+        IButtonConfigurator WithAccessibilityLavel(string label);
+        IButtonConfigurator WithEmoji(bool withEmoji = true);
+        IButtonConfigurator WithId(string blockId);
+        IButtonConfigurator WithConfirmationDialog(Action<IConfirmationDialog> dialogBuilder);
+    }
+
+    public class ButtonBuilder : IButtonConfigurator
     {
         private string _text = null;
         private string _value = null;
@@ -15,55 +28,55 @@ namespace HttpSlackBot.Blocks.Builders
         private bool _emoji = false;
         private string _blockId;
 
-        public ButtonBuilder WithText(string text)
+        public IButtonConfigurator WithText(string text)
         {
             _text = text;
             return this;
         }
 
-        public ButtonBuilder WithPayload(string payload)
+        public IButtonConfigurator WithPayload(string payload)
         {
             _value = payload;
             return this;
         }
 
-        public ButtonBuilder WithActionId(string actionId)
+        public IButtonConfigurator WithActionId(string actionId)
         {
             _actionId = actionId;
             return this;
         }
 
-        public ButtonBuilder WithUrl(string url)
+        public IButtonConfigurator WithUrl(string url)
         {
             _url = url;
             return this;
         }
 
-        public ButtonBuilder WithStyle(string style)
+        public IButtonConfigurator WithStyle(string style)
         {
             _style = style;
             return this;
         }
 
-        public ButtonBuilder WithAccessibilityLavel(string label)
+        public IButtonConfigurator WithAccessibilityLavel(string label)
         {
             _accessibilityLabel = label;
             return this;
         }
 
-        public ButtonBuilder WithEmoji(bool withEmoji = true)
+        public IButtonConfigurator WithEmoji(bool withEmoji = true)
         {
             _emoji = withEmoji;
             return this;
         }
 
-        public ButtonBuilder WithId(string blockId)
+        public IButtonConfigurator WithId(string blockId)
         {
             _blockId = blockId;
             return this;
         }
 
-        public ButtonBuilder WithConfirmationDialog(Action<ConfirmationDialogBuilder> dialogBuilder)
+        public IButtonConfigurator WithConfirmationDialog(Action<IConfirmationDialog> dialogBuilder)
         {
             var builder = new ConfirmationDialogBuilder();
 

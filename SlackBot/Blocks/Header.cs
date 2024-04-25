@@ -10,7 +10,7 @@ namespace HttpSlackBot.Blocks
     {
         public Header(string text, bool withEmoji = false)
         {
-            HeaderText = new TextAttribute(TextTypes.Plain,withEmoji);
+            HeaderText = new TextAttribute(TextType.Plain.ConvertToString(), withEmoji);
             HeaderText.Value = text;
         }
 
