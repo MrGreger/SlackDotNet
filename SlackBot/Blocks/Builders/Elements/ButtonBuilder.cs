@@ -13,7 +13,7 @@ namespace HttpSlackBot.Blocks.Builders
         IButtonConfigurator WithAccessibilityLavel(string label);
         IButtonConfigurator WithEmoji(bool withEmoji = true);
         IButtonConfigurator WithId(string blockId);
-        IButtonConfigurator WithConfirmationDialog(Action<IConfirmationDialog> dialogBuilder);
+        IButtonConfigurator WithConfirmationDialog(Action<IConfirmationDialogConfigurator> dialogBuilder);
     }
 
     public class ButtonBuilder : IButtonConfigurator
@@ -76,9 +76,9 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public IButtonConfigurator WithConfirmationDialog(Action<IConfirmationDialog> dialogBuilder)
+        public IButtonConfigurator WithConfirmationDialog(Action<IConfirmationDialogConfigurator> dialogBuilder)
         {
-            var builder = new ConfirmationDialogBuilder();
+            var builder = new ConfirmationDialogConfiguratorBuilder();
 
             builder.WithTitle("Missing title")
                 .WithText("Missing text")

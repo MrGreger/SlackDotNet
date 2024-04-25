@@ -1,24 +1,21 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using HttpSlackBot.Blocks.BaseBlocks;
+using HttpSlackBot.Blocks.Dialog;
+using Newtonsoft.Json;
 
-namespace HttpSlackBot.Interactions.Elements
+namespace HttpSlackBot.Blocks
 {
-    public class DatePicker
+    public class DatePicker : BlockBase
     {
-        public class DatePickerAction
-        {
-            [JsonProperty("selected_date")]
-            public DateTime? SelectedDate { get; set; }
-            [JsonProperty("type")]
-            public string Type { get; set; }
-        }
-
-        [JsonProperty("datepicker-action")]
-        public DatePickerAction InputAction { get; set; }
-
-        public DateTime? SelectedDate => InputAction.SelectedDate;
-        public string Type => InputAction.Type;
+        public override string Type => ElementTypes.DatePicker;
+        [JsonProperty("action_id")]
+        public string ActionId { get; set; }
+        [JsonProperty("initial_date")]
+        public string InitialDate { get; set; }
+        [JsonProperty("confirm")]
+        public ConfirmationDialog ConfirmationDialog { get; set; }
+        [JsonProperty("focus_on_load")]
+        public bool FocusOnLoad { get; set; }
+        [JsonProperty("placeholder")]
+        public PlainText Placeholder { get; set; }
     }
 }

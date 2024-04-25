@@ -35,6 +35,28 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
         
+        public ISectionConfigurator WithDatePicker(Action<IDatePickerConfigurator> builder)
+        {
+            var datePickerBuilder = new DatePickerBuilder();
+            
+            builder.Invoke(datePickerBuilder);
+            
+            _section.Acessory = datePickerBuilder.Build();
+            
+            return this;
+        }
+        
+        public ISectionConfigurator WithImage(Action<IImageConfigurator> builder)
+        {
+            var imageBuilder = new ImageBuilder();
+            
+            builder.Invoke(imageBuilder);
+            
+            _section.Acessory = imageBuilder.Build();
+            
+            return this;
+        }
+        
         public Section Build()
         {
             return _section;
