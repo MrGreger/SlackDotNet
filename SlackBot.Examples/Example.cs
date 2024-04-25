@@ -23,7 +23,7 @@ public class Example
                            });
                        }).AddSection(x =>
                        {
-                           x.WithCheckBoxes(x =>
+                           x.WithCheckboxes(x =>
                            {
                                x.AddOption(x =>
                                {
@@ -45,6 +45,17 @@ public class Example
                                x.WithUrl(
                                    "https://pbs.twimg.com/profile_images/625633822235693056/lNGUneLX_400x400.jpg");
                            });
-                       });
+                       })
+                      .AddSection(x => x.WithMultiSelectMenu(x =>
+                       {
+                           x.AddOption(x => { x.WithText("1"); }).AddOption(x => { x.WithText("2"); });
+                       })).AddSection(x => x.WithMultiSelectMenu(x =>
+                       {
+                           x.AddOptionGroups(x =>
+                           {
+                               x.AddOption(x => x.WithText("1_1"))
+                                .AddOption(x => x.WithText("2_2"));
+                           });
+                       }));
     }
 }

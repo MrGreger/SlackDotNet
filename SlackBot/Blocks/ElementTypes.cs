@@ -6,5 +6,6 @@ namespace HttpSlackBot.Blocks
         public const string CheckBoxes = "checkboxes";
         public const string DatePicker = "datepicker";
         public const string Image = "image";
+        public const string MultiSelectMenu = "multi_static_select";
     }
 }
