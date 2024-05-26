@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace HttpSlackBot.Blocks
 {
-    public class Image : BlockBase
+    public class Image : ElementBase
     {
         public override string Type => ElementTypes.Image;
         [JsonProperty("alt_text")]

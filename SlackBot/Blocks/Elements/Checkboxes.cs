@@ -8,9 +8,9 @@ using System.Text;
 
 namespace HttpSlackBot.Interactions.Elements
 {
-    public class CheckboxesElement
+    public class Checkboxes
     {
-        public class CheckboxesElementAction
+        public class CheckboxesAction
         {
             [JsonProperty("selected_options")]
             public CheckboxOption[] Options { get; set; }
@@ -29,7 +29,7 @@ namespace HttpSlackBot.Interactions.Elements
         }
 
         [JsonProperty("checkboxes-action")]
-        public CheckboxesElementAction InputAction { get; set; }
+        public CheckboxesAction InputAction { get; set; }
 
         public IEnumerable<CheckboxOption> SelectedOptions => InputAction.Options;
         public string Type => InputAction.Type;

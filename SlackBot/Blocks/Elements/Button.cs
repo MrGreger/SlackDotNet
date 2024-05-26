@@ -6,7 +6,7 @@ using System.Text;
 
 namespace HttpSlackBot.Blocks
 {
-    public class Button : BlockBase
+    public class Button : ElementBase
     {
         public class Styles
         {

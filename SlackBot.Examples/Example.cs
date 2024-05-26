@@ -48,7 +48,8 @@ public class Example
                        })
                       .AddSection(x => x.WithMultiSelectMenu(x =>
                        {
-                           x.AddOption(x => { x.WithText("1"); }).AddOption(x => { x.WithText("2"); });
+                           x.AddOption(x => { x.WithText("1"); })
+                            .AddOption(x => { x.WithText("2"); });
                        })).AddSection(x => x.WithMultiSelectMenu(x =>
                        {
                            x.AddOptionGroups(x =>

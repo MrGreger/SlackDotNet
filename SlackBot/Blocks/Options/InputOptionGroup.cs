@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace HttpSlackBot.Blocks.Checkbox
 {
-    public class InputOptionGroup
+    public class InputOptionGroup : IOptionPayload
     {
         [JsonProperty("label")]
         public PlainText Label { get; set; }

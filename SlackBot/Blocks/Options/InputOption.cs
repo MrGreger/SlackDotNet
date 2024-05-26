@@ -5,14 +5,14 @@ using System.Text;
 
 namespace HttpSlackBot.Blocks.Checkbox
 {
-    public class InputOption
+    public class InputOption : IOptionPayload
     {
         [JsonProperty("text")]
         public TextAttribute Text { get; set; }
         [JsonProperty("description")]
         public TextAttribute Description { get; set; }
         [JsonProperty("url")]
-        public TextAttribute Url { get; set; }
+        public string Url { get; set; }
         [JsonProperty("value")]
         public string Value { get; set; }
     }

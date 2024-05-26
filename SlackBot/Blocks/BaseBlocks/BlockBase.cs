@@ -11,10 +11,5 @@ namespace HttpSlackBot.Blocks.BaseBlocks
         public abstract string Type { get; }
         [JsonProperty("block_id")]
         public string BlockId { get; set; }
-
-        protected BlockBase(string blockId = null)
-        {
-            BlockId = blockId;
-        }
     }
 }

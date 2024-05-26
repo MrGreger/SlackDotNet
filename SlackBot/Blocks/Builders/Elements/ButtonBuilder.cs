@@ -12,7 +12,6 @@ namespace HttpSlackBot.Blocks.Builders
         IButtonConfigurator WithStyle(string style);
         IButtonConfigurator WithAccessibilityLavel(string label);
         IButtonConfigurator WithEmoji(bool withEmoji = true);
-        IButtonConfigurator WithId(string blockId);
         IButtonConfigurator WithConfirmationDialog(Action<IConfirmationDialogConfigurator> dialogBuilder);
     }
 
@@ -26,7 +25,6 @@ namespace HttpSlackBot.Blocks.Builders
         private ConfirmationDialog _confirmationDialog = null;
         private string _accessibilityLabel = null;
         private bool _emoji = false;
-        private string _blockId;
 
         public IButtonConfigurator WithText(string text)
         {
@@ -70,12 +68,6 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public IButtonConfigurator WithId(string blockId)
-        {
-            _blockId = blockId;
-            return this;
-        }
-
         public IButtonConfigurator WithConfirmationDialog(Action<IConfirmationDialogConfigurator> dialogBuilder)
         {
             var builder = new ConfirmationDialogConfiguratorBuilder();
@@ -114,8 +106,7 @@ namespace HttpSlackBot.Blocks.Builders
                 {
                     Value = _text
                 },
-                Url = _url,
-                BlockId = _blockId
+                Url = _url
             };
         }
     }

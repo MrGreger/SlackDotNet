@@ -13,13 +13,13 @@ namespace HttpSlackBot.Blocks
             ElementTypes.CheckBoxes,
         };
 
-        public bool CanAdd(BlockBase block)
+        public bool CanAdd(ElementBase element)
         {
-            return _availableElements.Contains(block.Type, StringComparer.InvariantCulture);
+            return _availableElements.Contains(element.Type, StringComparer.InvariantCulture);
         }
     }
 
-    public class Section : BlockBase
+    public class Section : ElementBase
     {
         public override string Type => BlockTypes.Section;
 
@@ -28,6 +28,8 @@ namespace HttpSlackBot.Blocks
         [JsonProperty("fields")]
         public TextAttribute[] Fields { get; set; }
         [JsonProperty("accessory")]
-        public BlockBase Acessory { get; set; }
+        public ElementBase Acessory { get; set; }
+        [JsonProperty("block_id")]
+        public string BlockId { get; set; }
     }
 }

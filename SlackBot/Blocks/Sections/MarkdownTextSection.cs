@@ -6,7 +6,7 @@ using System.Text;
 
 namespace HttpSlackBot.Blocks
 {
-    public class MarkdownTextSection : BlockBase
+    public class MarkdownTextSection : Section
     {
         public MarkdownTextSection(bool withEmoji)
         {
@@ -14,7 +14,5 @@ namespace HttpSlackBot.Blocks
         }
 
         public override string Type => BlockTypes.Section;
-        [JsonProperty("text")]
-        public TextAttribute Text { get; }
     }
 }

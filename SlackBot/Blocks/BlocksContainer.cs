@@ -8,30 +8,30 @@ namespace HttpSlackBot.Blocks
 {
     public class BlocksContainer
     {
-        public IReadOnlyCollection<BlockBase> Blocks => _blocks.AsReadOnly();
+        public IReadOnlyCollection<ElementBase> Blocks => _blocks.AsReadOnly();
 
-        private List<BlockBase> _blocks;
+        private List<ElementBase> _blocks;
 
         public BlocksContainer()
         {
-            _blocks = new List<BlockBase>();
+            _blocks = new List<ElementBase>();
         }
 
-        public BlocksContainer Add(BlockBase block)
+        public BlocksContainer Add(ElementBase element)
         {
-            _blocks.Add(block);
+            _blocks.Add(element);
             return this;
         }
 
-        public BlocksContainer AddRange(IEnumerable<BlockBase> blocks)
+        public BlocksContainer AddRange(IEnumerable<ElementBase> blocks)
         {
             _blocks.AddRange(blocks);
             return this;
         }
 
-        public BlocksContainer Remove(BlockBase block)
+        public BlocksContainer Remove(ElementBase element)
         {
-            _blocks.Remove(block);
+            _blocks.Remove(element);
             return this;
         }
 

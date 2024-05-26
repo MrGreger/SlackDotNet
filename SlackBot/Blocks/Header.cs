@@ -6,7 +6,7 @@ using System.Text;
 
 namespace HttpSlackBot.Blocks
 {
-    public class Header : BlockBase
+    public class Header : ElementBase
     {
         public Header(string text, bool withEmoji = false)
         {

@@ -8,7 +8,7 @@ using HttpSlackBot.Blocks.Dialog;
 
 namespace HttpSlackBot.Blocks.Checkbox
 {
-    public class Checkboxes : BlockBase
+    public class Checkboxes : ElementBase
     {
         public override string Type => ElementTypes.CheckBoxes;
         [JsonProperty("options")]
