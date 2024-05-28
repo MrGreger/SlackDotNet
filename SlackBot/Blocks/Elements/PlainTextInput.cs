@@ -4,10 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using HttpSlackBot.Blocks.Actions;
+using HttpSlackBot.Blocks.Elements;
 
 namespace HttpSlackBot.Blocks
 {
-    public class TextInput : ElementBase
+    public class PlainTextInput : ElementBase, IInputElement
     {
         public override string Type => ElementTypes.PlainTextInput;
         [JsonProperty("action_id")]
@@ -19,7 +20,7 @@ namespace HttpSlackBot.Blocks
         [JsonProperty("min_length")]
         public int MinLength { get; set; }
         [JsonProperty("max_length")]
-        public int MaxLength { get; set; }   
+        public int MaxLength { get; set; }
         [JsonProperty("dispatch_action_config")]
         public DispatchActionsConfig DispatchActions { get; set; }
         [JsonProperty("focus_on_load")]

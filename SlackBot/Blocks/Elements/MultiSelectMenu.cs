@@ -2,11 +2,12 @@ using System.Collections.Generic;
 using HttpSlackBot.Blocks.BaseBlocks;
 using HttpSlackBot.Blocks.Checkbox;
 using HttpSlackBot.Blocks.Dialog;
+using HttpSlackBot.Blocks.Elements;
 using Newtonsoft.Json;
 
 namespace HttpSlackBot.Blocks
 {
-    public class MultiSelectMenu : ElementBase
+    public class MultiSelectMenu : ElementBase, ISectionElement, IActionsElement, IInputElement
     {
         public override string Type => ElementTypes.MultiSelectMenu;
         [JsonProperty("action_id")]

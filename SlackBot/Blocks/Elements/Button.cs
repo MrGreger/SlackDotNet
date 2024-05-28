@@ -3,10 +3,11 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using HttpSlackBot.Blocks.Elements;
 
 namespace HttpSlackBot.Blocks
 {
-    public class Button : ElementBase
+    public class Button : ElementBase, ISectionElement, IActionsElement
     {
         public class Styles
         {

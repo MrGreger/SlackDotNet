@@ -1,10 +1,11 @@
 using HttpSlackBot.Blocks.Actions;
 using HttpSlackBot.Blocks.BaseBlocks;
+using HttpSlackBot.Blocks.Elements;
 using Newtonsoft.Json;
 
 namespace HttpSlackBot.Blocks.Builders
 {
-    public class NumberInput : ElementBase
+    public class NumberInput : ElementBase, IInputElement
     {
         public override string Type => ElementTypes.NumberInput;
         [JsonProperty("action_id")]

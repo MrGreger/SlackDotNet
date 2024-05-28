@@ -6,15 +6,10 @@ using System.Text;
 
 namespace HttpSlackBot.Blocks
 {
-    public class ActionsSection : ElementBase
+    public class ActionsSection : BlockBase
     {
         public override string Type => BlockTypes.Actions;
         [JsonProperty("elements")]
-        public IList<ElementBase> Elements { get; set; }
-
-        public ActionsSection()
-        {
-            Elements = new List<ElementBase>();
-        }
+        public IList<ElementBase> Elements { get; set; } = new List<ElementBase>();
     }
 }

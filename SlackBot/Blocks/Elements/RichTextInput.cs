@@ -1,10 +1,11 @@
 using HttpSlackBot.Blocks.Actions;
 using HttpSlackBot.Blocks.BaseBlocks;
+using HttpSlackBot.Blocks.Elements;
 using Newtonsoft.Json;
 
 namespace HttpSlackBot.Blocks.Builders
 {
-    public class RichTextInput : ElementBase
+    public class RichTextInput : ElementBase, IInputElement
     {
         public override string Type => ElementTypes.RichTextInput;
         [JsonProperty("action_id")]

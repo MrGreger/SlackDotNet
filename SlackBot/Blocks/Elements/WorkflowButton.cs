@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace HttpSlackBot.Blocks.Elements
 {
-    public class WorkflowButton : ElementBase
+    public class WorkflowButton : ElementBase, ISectionElement, IActionsElement
     {
         public class Styles
         {

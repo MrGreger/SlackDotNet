@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace HttpSlackBot.Blocks.Elements
 {
-    public class EmailInput : ElementBase
+    public class EmailInput : ElementBase, IInputElement
     {
         public override string Type => ElementTypes.EmailInput;
         [JsonProperty("action_id")]

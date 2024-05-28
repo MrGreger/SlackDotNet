@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace HttpSlackBot.Blocks.Elements
 {
-    public class SelectMenu : ElementBase
+    public class SelectMenu : ElementBase, ISectionElement, IActionsElement, IInputElement
     {
         public override string Type => ElementTypes.SelectMenu;
         [JsonProperty("action_id")]

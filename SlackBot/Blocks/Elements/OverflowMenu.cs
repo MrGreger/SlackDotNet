@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace HttpSlackBot.Blocks.Elements
 {
-    public class OverflowMenu : ElementBase
+    public class OverflowMenu : ElementBase, ISectionElement, IActionsElement
     {
         
         public class OverflowMenuOption

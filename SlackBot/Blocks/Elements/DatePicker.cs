@@ -1,10 +1,11 @@
 using HttpSlackBot.Blocks.BaseBlocks;
 using HttpSlackBot.Blocks.Dialog;
+using HttpSlackBot.Blocks.Elements;
 using Newtonsoft.Json;
 
 namespace HttpSlackBot.Blocks
 {
-    public class DatePicker : ElementBase
+    public class DatePicker : ElementBase, ISectionElement, IActionsElement, IInputElement
     {
         public override string Type => ElementTypes.DatePicker;
         [JsonProperty("action_id")]

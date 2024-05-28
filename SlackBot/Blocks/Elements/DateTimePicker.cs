@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace HttpSlackBot.Blocks.Elements
 {
-    public class DateTimePicker : ElementBase
+    public class DateTimePicker : ElementBase, IActionsElement, IInputElement
     {
         public override string Type => ElementTypes.DateTimePicker;
         [JsonProperty("action_id")]

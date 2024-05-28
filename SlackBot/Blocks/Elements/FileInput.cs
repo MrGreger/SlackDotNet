@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace HttpSlackBot.Blocks.Elements
 {
-    public class FileInput : ElementBase
+    public class FileInput : ElementBase, IInputElement
     {
         public override string Type => ElementTypes.FileInput;
         [JsonProperty("action_id")]

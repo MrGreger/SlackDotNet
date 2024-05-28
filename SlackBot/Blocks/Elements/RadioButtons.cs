@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace HttpSlackBot.Blocks.Elements
 {
-    public class RadioButtons : ElementBase
+    public class RadioButtons : ElementBase, ISectionElement, IActionsElement, IInputElement
     {
         public override string Type => ElementTypes.RadioButtons;
         [JsonProperty("action_id")]
