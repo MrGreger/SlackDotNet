@@ -1,7 +1,9 @@
 using System;
 using HttpSlackBot.Blocks.BaseBlocks;
 using HttpSlackBot.Blocks.Builders.Checkboxes;
+using HttpSlackBot.Blocks.Builders.Text;
 using HttpSlackBot.Blocks.Builders.Workflow;
+using ITextConfigurator = HttpSlackBot.Blocks.Builders.RichText.Elements.ITextConfigurator;
 
 namespace HttpSlackBot.Blocks.Builders
 {
@@ -16,8 +18,8 @@ namespace HttpSlackBot.Blocks.Builders
                                             ITimePickerContainer<ISectionConfigurator>,
                                             IWorkflowButtonContainer<ISectionConfigurator>
     {
-        ISectionConfigurator WithText(string text, TextType type, bool emoji= true);
-        ISectionConfigurator WithField(string text, TextType type, bool emoji= true);
+        ISectionConfigurator WithText(Action<ITextObjectConfigurator> configurator);
+        ISectionConfigurator WithField(Action<ITextObjectConfigurator> configurator);
         ISectionConfigurator WithBlockId(string id);
     }
 
@@ -134,28 +136,30 @@ namespace HttpSlackBot.Blocks.Builders
 
             return this;
         }
-        
-        public ISectionConfigurator WithText(string text, TextType type, bool emoji = true)
+
+        public ISectionConfigurator WithText(Action<ITextObjectConfigurator> configurator)
         {
-            _section.Text = new TextAttribute(type.ConvertToString(), emoji)
-            {
-                Value = text
-            };
+            var builder = new TextObjectObjectBuilder();
+
+            configurator.Invoke(builder);
+
+            _section.Text = builder.Build<TextAttribute>();
 
             return this;
         }
 
-        public ISectionConfigurator WithField(string text, TextType type, bool emoji = true)
+        public ISectionConfigurator WithField(Action<ITextObjectConfigurator> configurator)
         {
             if (_section.Fields.Count >= 10)
             {
                 throw new Exception("Max 10 elements");
             }
             
-            _section.Fields.Add(new TextAttribute(type.ConvertToString(), emoji)
-            {
-                Value = text
-            });
+            var builder = new TextObjectObjectBuilder();
+
+            configurator.Invoke(builder);
+
+            _section.Fields.Add(builder.Build<TextAttribute>());
 
             return this;
         }
@@ -163,14 +167,13 @@ namespace HttpSlackBot.Blocks.Builders
         public ISectionConfigurator WithBlockId(string id)
         {
             _section.BlockId = id;
-            
+
             return this;
         }
-        
+
         public Section Build()
         {
             return _section;
         }
-
     }
 }

@@ -105,9 +105,9 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public IInputSectionConfigurator WithPlainTextInput(Action<ITextInputConfigurator> configurator)
+        public IInputSectionConfigurator WithPlainTextInput(Action<IPlainTextInputConfigurator> configurator)
         {
-            var builder = new TextInputBuilder();
+            var builder = new PlainTextInputBuilder();
 
             configurator.Invoke(builder);
 

@@ -2,10 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using HttpSlackBot.Blocks.BaseBlocks;
 
 namespace HttpSlackBot.Blocks
 {
-    public class TextAttribute
+    public class TextAttribute : ElementBase
     {
         public TextAttribute(string type, bool emoji)
         {
@@ -14,9 +15,11 @@ namespace HttpSlackBot.Blocks
         }
 
         [JsonProperty("type")]
-        public string Type { get; }
+        public override string Type { get; }
         [JsonProperty("emoji")]
-        public bool Emoji { get; set; }
+        public bool Emoji { get; set; }        
+        [JsonProperty("verbatim")]
+        public bool Verbatim { get; set; }
         [JsonProperty("text")]
         public string Value { get; set; }
     }

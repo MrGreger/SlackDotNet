@@ -4,25 +4,25 @@ using HttpSlackBot.Blocks.Builders.Workflow;
 
 namespace HttpSlackBot.Blocks.Builders
 {
-    public interface IActionsSectionBuilder : IButtonContainer<IActionsSectionBuilder>,
-                                              ICheckboxesContainer<IActionsSectionBuilder>,
-                                              IDatePickerContainer<IActionsSectionBuilder>,
-                                              IDateTimePickerContainer<IActionsSectionBuilder>,
-                                              IMultiSelectMenuContainer<IActionsSectionBuilder>,
-                                              IOverflowMenuContainer<IActionsSectionBuilder>,
-                                              IRadioButtonsContainer<IActionsSectionBuilder>,
-                                              ISelectMenuContainer<IActionsSectionBuilder>,
-                                              ITimePickerContainer<IActionsSectionBuilder>,
-                                              IWorkflowButtonContainer<IActionsSectionBuilder>
+    public interface IActionsSectionConfigurator : IButtonContainer<IActionsSectionConfigurator>,
+                                              ICheckboxesContainer<IActionsSectionConfigurator>,
+                                              IDatePickerContainer<IActionsSectionConfigurator>,
+                                              IDateTimePickerContainer<IActionsSectionConfigurator>,
+                                              IMultiSelectMenuContainer<IActionsSectionConfigurator>,
+                                              IOverflowMenuContainer<IActionsSectionConfigurator>,
+                                              IRadioButtonsContainer<IActionsSectionConfigurator>,
+                                              ISelectMenuContainer<IActionsSectionConfigurator>,
+                                              ITimePickerContainer<IActionsSectionConfigurator>,
+                                              IWorkflowButtonContainer<IActionsSectionConfigurator>
     {
-        IActionsSectionBuilder WithId(string id);
+        IActionsSectionConfigurator WithId(string id);
     }
 
-    public class ActionsSectionBuilder : IActionsSectionBuilder
+    public class ActionsSectionConfigurator : IActionsSectionConfigurator
     {
         private ActionsSection _actionsSection = new ActionsSection();
 
-        public IActionsSectionBuilder WithButton(Action<IButtonConfigurator> configurator)
+        public IActionsSectionConfigurator WithButton(Action<IButtonConfigurator> configurator)
         {
             var builder = new ButtonBuilder();
 
@@ -33,7 +33,7 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public IActionsSectionBuilder WithCheckboxes(Action<ICheckboxesConfigurator> configurator)
+        public IActionsSectionConfigurator WithCheckboxes(Action<ICheckboxesConfigurator> configurator)
         {
             var builder = new CheckboxesBuilder();
 
@@ -44,7 +44,7 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public IActionsSectionBuilder WithDatePicker(Action<IDatePickerConfigurator> configurator)
+        public IActionsSectionConfigurator WithDatePicker(Action<IDatePickerConfigurator> configurator)
         {
             var builder = new DatePickerBuilder();
 
@@ -55,7 +55,7 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public IActionsSectionBuilder WithDateTimePicker(Action<IDateTimePickerConfigurator> configurator)
+        public IActionsSectionConfigurator WithDateTimePicker(Action<IDateTimePickerConfigurator> configurator)
         {
             var builder = new DateTimePickerBuilder();
 
@@ -66,7 +66,7 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public IActionsSectionBuilder WithMultiSelectMenu(Action<IMultiSelectMenuConfigurator> configurator)
+        public IActionsSectionConfigurator WithMultiSelectMenu(Action<IMultiSelectMenuConfigurator> configurator)
         {
             var builder = new MultiSelectMenuBuilder();
 
@@ -77,7 +77,7 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public IActionsSectionBuilder WithOverflowMenu(Action<IOverflowMenuConfigurator> configurator)
+        public IActionsSectionConfigurator WithOverflowMenu(Action<IOverflowMenuConfigurator> configurator)
         {
             var builder = new OverflowMenuBuilder();
 
@@ -88,7 +88,7 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public IActionsSectionBuilder WithRadioButtons(Action<IRadioButtonsConfigurator> configurator)
+        public IActionsSectionConfigurator WithRadioButtons(Action<IRadioButtonsConfigurator> configurator)
         {
             var builder = new RadioButtonsBuilder();
 
@@ -99,7 +99,7 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public IActionsSectionBuilder WithSelectMenu(Action<ISelectMenuConfigurator> configurator)
+        public IActionsSectionConfigurator WithSelectMenu(Action<ISelectMenuConfigurator> configurator)
         {
             var builder = new SelectMenuBuilder();
 
@@ -110,7 +110,7 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public IActionsSectionBuilder WithTimePicker(Action<ITimePickerConfigurator> configurator)
+        public IActionsSectionConfigurator WithTimePicker(Action<ITimePickerConfigurator> configurator)
         {
             var builder = new TimePickerBuilder();
 
@@ -121,7 +121,7 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public IActionsSectionBuilder WithWorkflowButton(Action<IWorkflowButtonConfigurator> configurator)
+        public IActionsSectionConfigurator WithWorkflowButton(Action<IWorkflowButtonConfigurator> configurator)
         {
             var builder = new WorkflowButtonBuilder();
 
@@ -132,7 +132,7 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public IActionsSectionBuilder WithId(string id)
+        public IActionsSectionConfigurator WithId(string id)
         {
             _actionsSection.BlockId = id;
 

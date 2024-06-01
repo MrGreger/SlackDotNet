@@ -1,11 +1,13 @@
+using System;
+using HttpSlackBot.Blocks.Builders.Text;
 using HttpSlackBot.Blocks.Checkbox;
 
 namespace HttpSlackBot.Blocks.Builders
 {
     public interface ICheckboxOptionConfigurator
     {
-        ICheckboxOptionConfigurator WithText(string text, TextType textType = TextType.Plain, bool emoji = true);
-        ICheckboxOptionConfigurator WithDescription(string text, TextType textType = TextType.Plain, bool emoji = true);
+        ICheckboxOptionConfigurator WithText(Action<ITextObjectConfigurator> configurator);
+        ICheckboxOptionConfigurator WithDescription(Action<ITextObjectConfigurator> configurator);
         ICheckboxOptionConfigurator WithValue(string value);
         ICheckboxOptionConfigurator Selected(bool selected = true);
     }
@@ -16,22 +18,24 @@ namespace HttpSlackBot.Blocks.Builders
 
         private InputOption _inputOption = new InputOption();
         
-        public ICheckboxOptionConfigurator WithText(string text, TextType textType = TextType.Plain, bool emoji = true)
+        public ICheckboxOptionConfigurator WithText(Action<ITextObjectConfigurator> configurator)
         {
-            _inputOption.Text = new TextAttribute(textType.ConvertToString(), emoji)
-            {
-                Value = text
-            };
+            var builder = new TextObjectObjectBuilder();
+            
+            configurator.Invoke(builder);
+
+            _inputOption.Text = builder.Build<TextAttribute>();
 
             return this;
         }
 
-        public ICheckboxOptionConfigurator WithDescription(string text, TextType textType = TextType.Plain, bool emoji = true)
+        public ICheckboxOptionConfigurator WithDescription(Action<ITextObjectConfigurator> configurator)
         {
-            _inputOption.Description = new TextAttribute(textType.ConvertToString(), emoji)
-            {
-                Value = text
-            };
+            var builder = new TextObjectObjectBuilder();
+            
+            configurator.Invoke(builder);
+
+            _inputOption.Description = builder.Build<TextAttribute>();
 
             return this;
         }

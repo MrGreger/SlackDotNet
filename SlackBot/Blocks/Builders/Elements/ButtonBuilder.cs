@@ -10,7 +10,7 @@ namespace HttpSlackBot.Blocks.Builders
         IButtonConfigurator WithActionId(string actionId);
         IButtonConfigurator WithUrl(string url);
         IButtonConfigurator WithStyle(string style);
-        IButtonConfigurator WithAccessibilityLavel(string label);
+        IButtonConfigurator WithAccessibilityLabel(string label);
         IButtonConfigurator WithEmoji(bool withEmoji = true);
         IButtonConfigurator WithConfirmationDialog(Action<IConfirmationDialogConfigurator> dialogBuilder);
     }
@@ -56,7 +56,7 @@ namespace HttpSlackBot.Blocks.Builders
             return this;
         }
 
-        public IButtonConfigurator WithAccessibilityLavel(string label)
+        public IButtonConfigurator WithAccessibilityLabel(string label)
         {
             _accessibilityLabel = label;
             return this;

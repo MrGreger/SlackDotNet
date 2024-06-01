@@ -8,6 +8,18 @@ public class Example
     {
         var messageBuilder = new BlockedMessageBuilder();
 
+        new ContextSectionBuilder().WithText(x =>
+            x.Markdown()
+             .Verbatim()
+             .Emoji()
+             .WithText("123")
+        ).WithText(x =>
+        {
+            x.Plain()
+             .Emoji()
+             .WithText("321");
+        });
+
         messageBuilder.AddSection(x =>
                        {
                            x.WithButton(x =>
@@ -27,12 +39,12 @@ public class Example
                            {
                                x.AddOption(x =>
                                {
-                                   x.WithText("Text")
+                                   x.WithText(x => x.Plain().WithText("text"))
                                     .WithValue("0")
                                     .Selected();
                                }).AddOption(x =>
                                {
-                                   x.WithText("Text")
+                                   x.WithText(x => x.Markdown("mrkdwn").Emoji(false).Verbatim())
                                     .WithValue("1")
                                     .Selected();
                                });

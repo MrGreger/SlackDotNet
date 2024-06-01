@@ -1,5 +1,6 @@
 using System;
 using HttpSlackBot.Blocks.Builders.Checkboxes;
+using HttpSlackBot.Blocks.Builders.Text;
 using HttpSlackBot.Blocks.Builders.Workflow;
 
 namespace HttpSlackBot.Blocks.Builders
@@ -60,7 +61,12 @@ namespace HttpSlackBot.Blocks.Builders
     
     public interface IPlainTextInputContainer<T> : IElementContainer<T>
     {
-        T WithPlainTextInput(Action<ITextInputConfigurator> configurator);
+        T WithPlainTextInput(Action<IPlainTextInputConfigurator> configurator);
+    }
+    
+    public interface ITextContainer<T> : IElementContainer<T>
+    {
+        T WithText(Action<ITextObjectConfigurator> configurator);
     }
     
     public interface IRadioButtonsContainer<T> : IElementContainer<T>
