@@ -1,5 +1,6 @@
 ﻿using System.Text.Json.Nodes;
-using SlackBot.Blocks.Builders;
+using SlackBotDotNet.BlockKit.Builders.Blocks;
+using SlackBotDotNet.BlockKit.Builders.Surfaces;
 
 namespace SlackBot.Examples;
 

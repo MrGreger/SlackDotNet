@@ -1,7 +1,9 @@
 using System;
-using SlackBot.Blocks.Builders.Actions;
+using SlackBotDotNet.BlockKit.Builders.Actions;
+using SlackBotDotNet.BlockKit.Elements;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Builders
+namespace SlackBotDotNet.BlockKit.Builders.Elements
 {
     public interface INumberInputConfigurator
     {

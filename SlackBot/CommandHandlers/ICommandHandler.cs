@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using SlackBot.Commands;
+﻿using System.Threading.Tasks;
+using SlackBotDotNet.Commands;
 
-namespace SlackBot.CommandHandlers
+namespace SlackBotDotNet.CommandHandlers
 {
     public interface ICommandHandler
     {

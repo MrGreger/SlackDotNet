@@ -1,10 +1,7 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using SlackBot.Blocks.BaseBlocks;
+using SlackBotDotNet.BlockKit.BaseBlocks;
 
-namespace SlackBot.Blocks
+namespace SlackBotDotNet.BlockKit.Text
 {
     public class TextAttribute : ElementBase
     {

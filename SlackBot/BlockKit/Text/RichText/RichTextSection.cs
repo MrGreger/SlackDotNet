@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using SlackBotDotNet.BlockKit.Text.RichText.Elements;
 
-namespace SlackBot.Blocks
+namespace SlackBotDotNet.BlockKit.Text.RichText
 {
     public class RichTextSection : RichTextSectionBase
     {

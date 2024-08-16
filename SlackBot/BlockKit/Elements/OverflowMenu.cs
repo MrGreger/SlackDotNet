@@ -1,9 +1,9 @@
 using Newtonsoft.Json;
-using SlackBot.Blocks.BaseBlocks;
-using SlackBot.Blocks.Checkbox;
-using SlackBot.Blocks.Dialog;
+using SlackBotDotNet.BlockKit.BaseBlocks;
+using SlackBotDotNet.BlockKit.Dialog;
+using SlackBotDotNet.BlockKit.Options;
 
-namespace SlackBot.Blocks.Elements
+namespace SlackBotDotNet.BlockKit.Elements
 {
     public class OverflowMenu : ElementBase, ISectionElement, IActionsElement
     {

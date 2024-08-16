@@ -1,8 +1,9 @@
 using Newtonsoft.Json;
-using SlackBot.Blocks.Actions;
-using SlackBot.Blocks.BaseBlocks;
+using SlackBotDotNet.BlockKit.Actions;
+using SlackBotDotNet.BlockKit.BaseBlocks;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Elements
+namespace SlackBotDotNet.BlockKit.Elements
 {
     public class UrlInputElement : ElementBase, IInputElement
     {

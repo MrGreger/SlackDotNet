@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace SlackBot
+namespace SlackBotDotNet
 {
     public class HandlersRegistry<THandler>
     {

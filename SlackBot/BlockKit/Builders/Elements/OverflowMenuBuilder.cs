@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
-using SlackBot.Blocks.Checkbox;
-using SlackBot.Blocks.Elements;
+using SlackBotDotNet.BlockKit.Builders.Elements.Options;
+using SlackBotDotNet.BlockKit.Elements;
+using SlackBotDotNet.BlockKit.Options;
 
-namespace SlackBot.Blocks.Builders
+namespace SlackBotDotNet.BlockKit.Builders.Elements
 {
     public interface IOverflowMenuConfigurator
     {

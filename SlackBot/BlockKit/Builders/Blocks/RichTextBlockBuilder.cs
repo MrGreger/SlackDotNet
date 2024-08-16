@@ -1,8 +1,8 @@
 using System;
-using SlackBot.Blocks.Builders.Elements.RichText;
-using SlackBot.Blocks.Builders.RichText.Elements;
+using SlackBotDotNet.BlockKit.Blocks;
+using SlackBotDotNet.BlockKit.Builders.Elements.RichText;
 
-namespace SlackBot.Blocks.Builders.RichText
+namespace SlackBotDotNet.BlockKit.Builders.Blocks
 {
     public interface IRichTextBlockConfigurator
     {
@@ -68,7 +68,7 @@ namespace SlackBot.Blocks.Builders.RichText
             return this;
         }
 
-        public Blocks.RichTextBlock Build()
+        public RichTextBlock Build()
         {
             return _richTextBlock;
         }

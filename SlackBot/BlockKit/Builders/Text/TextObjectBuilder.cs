@@ -1,6 +1,6 @@
-using System;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Builders.Text
+namespace SlackBotDotNet.BlockKit.Builders.Text
 {
     public interface ITextConfiguratorBase<T>
     {

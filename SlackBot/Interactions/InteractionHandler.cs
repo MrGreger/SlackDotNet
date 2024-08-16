@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
-namespace SlackBot.Interactions
+namespace SlackBotDotNet.Interactions
 {
     public abstract class InteractionHandler
     {

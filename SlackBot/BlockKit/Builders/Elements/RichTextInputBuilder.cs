@@ -1,8 +1,10 @@
 using System;
-using SlackBot.Blocks.Builders.Actions;
-using SlackBot.Blocks.Builders.RichText;
+using SlackBotDotNet.BlockKit.Builders.Actions;
+using SlackBotDotNet.BlockKit.Builders.Blocks;
+using SlackBotDotNet.BlockKit.Elements;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Builders
+namespace SlackBotDotNet.BlockKit.Builders.Elements
 {
     public interface IRichTextInputConfigurator
     {

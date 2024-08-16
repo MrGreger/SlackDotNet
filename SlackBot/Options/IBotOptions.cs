@@ -1,4 +1,4 @@
-﻿namespace SlackBot.Options
+﻿namespace SlackBotDotNet.Options
 {
     public interface IBotOptions
     {

@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Checkbox
+namespace SlackBotDotNet.BlockKit.Options
 {
     public class InputOptionGroup : IOptionPayload
     {

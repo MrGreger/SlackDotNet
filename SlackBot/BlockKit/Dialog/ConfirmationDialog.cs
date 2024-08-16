@@ -1,6 +1,7 @@
 using Newtonsoft.Json;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Dialog
+namespace SlackBotDotNet.BlockKit.Dialog
 {
     public class ConfirmationDialog
     {

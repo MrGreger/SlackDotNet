@@ -1,7 +1,7 @@
 using System;
-using SlackBot.Blocks.Elements;
+using SlackBotDotNet.BlockKit.Elements;
 
-namespace SlackBot.Blocks.Builders
+namespace SlackBotDotNet.BlockKit.Builders.Elements
 {
     public interface IDateTimePickerConfigurator
     {

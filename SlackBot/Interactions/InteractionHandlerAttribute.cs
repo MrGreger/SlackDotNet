@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace SlackBot.Interactions
+namespace SlackBotDotNet.Interactions
 {
     public class InteractionHandlerAttribute : Attribute
     {

@@ -1,7 +1,8 @@
 using Newtonsoft.Json;
-using SlackBot.Blocks.BaseBlocks;
+using SlackBotDotNet.BlockKit.BaseBlocks;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks
+namespace SlackBotDotNet.BlockKit.Blocks
 {
     public class VideoBlock : BlockBase
     {

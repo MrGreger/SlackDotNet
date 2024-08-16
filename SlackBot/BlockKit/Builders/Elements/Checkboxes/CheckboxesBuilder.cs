@@ -1,6 +1,7 @@
 using System;
+using SlackBotDotNet.BlockKit.Builders.Elements.Options;
 
-namespace SlackBot.Blocks.Builders.Checkboxes
+namespace SlackBotDotNet.BlockKit.Builders.Elements.Checkboxes
 {
     public interface ICheckboxesConfigurator
     {
@@ -9,7 +10,7 @@ namespace SlackBot.Blocks.Builders.Checkboxes
     
     public class CheckboxesBuilder : ICheckboxesConfigurator
     {
-        private Checkbox.Checkboxes _checkboxes = new Checkbox.Checkboxes();
+        private BlockKit.Elements.Checkboxes _checkboxes = new BlockKit.Elements.Checkboxes();
         
         public ICheckboxesConfigurator AddOption(Action<ICheckboxOptionConfigurator> builder)
         {
@@ -28,7 +29,7 @@ namespace SlackBot.Blocks.Builders.Checkboxes
             return this;
         }
 
-        public Checkbox.Checkboxes Build()
+        public BlockKit.Elements.Checkboxes Build()
         {
             return _checkboxes;
         }

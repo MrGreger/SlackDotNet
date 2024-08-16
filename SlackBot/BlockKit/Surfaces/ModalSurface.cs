@@ -1,4 +1,4 @@
-namespace SlackBot.Blocks
+namespace SlackBotDotNet.BlockKit.Surfaces
 {
     
     /// <summary>

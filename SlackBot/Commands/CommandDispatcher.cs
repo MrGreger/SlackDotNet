@@ -1,11 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 using System.Threading.Tasks;
-using SlackBot.CommandHandlers;
+using Microsoft.Extensions.DependencyInjection;
+using SlackBotDotNet.CommandHandlers;
 
-namespace SlackBot.Commands
+namespace SlackBotDotNet.Commands
 {
     public class CommandDispatcher
     {

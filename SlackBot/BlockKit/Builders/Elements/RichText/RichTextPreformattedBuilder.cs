@@ -1,6 +1,7 @@
-using SlackBot.Blocks.Builders.RichText;
+using SlackBotDotNet.BlockKit.Text.RichText;
+using SlackBotDotNet.BlockKit.Text.RichText.Elements;
 
-namespace SlackBot.Blocks.Builders.Elements.RichText
+namespace SlackBotDotNet.BlockKit.Builders.Elements.RichText
 {
     public interface IRichTextPreformattedConfigurator : IElementsContainerConfigurator
     {

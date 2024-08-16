@@ -1,12 +1,11 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
-using SlackBot.CommandHandlers;
-using SlackBot.Commands;
+using Microsoft.Extensions.DependencyInjection;
+using SlackBotDotNet.CommandHandlers;
+using SlackBotDotNet.Commands;
 
-namespace SlackBot.Helpers
+namespace SlackBotDotNet.Helpers
 {
     public static class AddCommandHandlersExtension
     {

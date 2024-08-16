@@ -1,7 +1,8 @@
 using System;
-using SlackBot.Blocks.Elements;
+using SlackBotDotNet.BlockKit.Elements;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Builders.Workflow
+namespace SlackBotDotNet.BlockKit.Builders.Elements.Workflow
 {
     public interface IWorkflowButtonConfigurator
     {
@@ -41,7 +42,7 @@ namespace SlackBot.Blocks.Builders.Workflow
             
             configurator.Invoke(builder);
 
-            _workflowButton.Workflow = new Blocks.Elements.Workflow()
+            _workflowButton.Workflow = new BlockKit.Elements.Workflow()
             {
                 Trigger = builder.Build()
             };

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace SlackBot.Blocks.Elements
+namespace SlackBotDotNet.BlockKit.Elements
 {
     public class Workflow
     {

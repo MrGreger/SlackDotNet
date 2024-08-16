@@ -1,9 +1,9 @@
 using Newtonsoft.Json;
-using SlackBot.Blocks.BaseBlocks;
-using SlackBot.Blocks.Dialog;
-using SlackBot.Blocks.Elements;
+using SlackBotDotNet.BlockKit.BaseBlocks;
+using SlackBotDotNet.BlockKit.Dialog;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks
+namespace SlackBotDotNet.BlockKit.Elements
 {
     public class DatePicker : ElementBase, ISectionElement, IActionsElement, IInputElement
     {

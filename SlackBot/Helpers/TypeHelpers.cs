@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 
-namespace SlackBot.Helpers
+namespace SlackBotDotNet.Helpers
 {
     public static class TypeHelpers
     {

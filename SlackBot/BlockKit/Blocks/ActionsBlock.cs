@@ -1,10 +1,8 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using SlackBot.Blocks.BaseBlocks;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
+using SlackBotDotNet.BlockKit.BaseBlocks;
 
-namespace SlackBot.Blocks
+namespace SlackBotDotNet.BlockKit.Blocks
 {
     public class ActionsBlock : BlockBase
     {

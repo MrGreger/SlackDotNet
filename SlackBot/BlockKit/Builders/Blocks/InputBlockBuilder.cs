@@ -1,7 +1,10 @@
 using System;
-using SlackBot.Blocks.Builders.Checkboxes;
+using SlackBotDotNet.BlockKit.Blocks;
+using SlackBotDotNet.BlockKit.Builders.Elements;
+using SlackBotDotNet.BlockKit.Builders.Elements.Checkboxes;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Builders
+namespace SlackBotDotNet.BlockKit.Builders.Blocks
 {
     public interface IInputBlockConfigurator : ICheckboxesContainer<IInputBlockConfigurator>,
                                                  IDatePickerContainer<IInputBlockConfigurator>,

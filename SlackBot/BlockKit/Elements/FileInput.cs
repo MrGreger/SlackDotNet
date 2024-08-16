@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
-using SlackBot.Blocks.BaseBlocks;
+using SlackBotDotNet.BlockKit.BaseBlocks;
 
-namespace SlackBot.Blocks.Elements
+namespace SlackBotDotNet.BlockKit.Elements
 {
     public class FileInput : ElementBase, IInputElement
     {

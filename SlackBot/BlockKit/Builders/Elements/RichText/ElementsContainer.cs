@@ -1,8 +1,8 @@
 using System;
-using SlackBot.Interactions.Elements;
-using SlackBot.Blocks.Builders.RichText.Elements;
+using SlackBotDotNet.BlockKit.Builders.Elements.RichText.Elements;
+using SlackBotDotNet.BlockKit.Text.RichText.Elements;
 
-namespace SlackBot.Blocks.Builders.RichText
+namespace SlackBotDotNet.BlockKit.Builders.Elements.RichText
 {
     public interface IElementsContainerConfigurator
     {

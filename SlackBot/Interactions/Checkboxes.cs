@@ -1,12 +1,7 @@
-﻿using SlackBot.Blocks;
-using SlackBot.Blocks.Checkbox;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace SlackBot.Interactions.Elements
+namespace SlackBotDotNet.Interactions
 {
     public class Checkboxes
     {

@@ -1,14 +1,14 @@
-﻿using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using SlackBot.Models;
-using SlackBot.Options;
+using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
+using SlackBotDotNet.Models;
+using SlackBotDotNet.Options;
 
-namespace SlackBot.Messaging
+namespace SlackBotDotNet.Messaging
 {
     public class SlackMessageSender<TOptions> where TOptions : class, IBotOptions
     {

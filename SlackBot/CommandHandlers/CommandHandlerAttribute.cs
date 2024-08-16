@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace SlackBot.CommandHandlers
+namespace SlackBotDotNet.CommandHandlers
 {
     public class CommandHandlerAttribute : Attribute
     {

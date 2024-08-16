@@ -1,10 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace SlackBot.Models
+namespace SlackBotDotNet.Models
 {
     public class Message
     {

@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>HttpSlackBot</RootNamespace>
+    <RootNamespace>SlackBotDotNet</RootNamespace>
+    <AssemblyName>SlackBotDotNet</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

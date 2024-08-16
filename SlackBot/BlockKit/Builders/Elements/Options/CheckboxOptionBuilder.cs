@@ -1,8 +1,8 @@
 using System;
-using SlackBot.Blocks.Builders.Text;
-using SlackBot.Blocks.Checkbox;
+using SlackBotDotNet.BlockKit.Builders.Text;
+using SlackBotDotNet.BlockKit.Options;
 
-namespace SlackBot.Blocks.Builders
+namespace SlackBotDotNet.BlockKit.Builders.Elements.Options
 {
     public interface ICheckboxOptionConfigurator
     {

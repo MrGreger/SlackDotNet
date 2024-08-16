@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace SlackBot.Blocks.Actions
+namespace SlackBotDotNet.BlockKit.Actions
 {
     public class DispatchActionsConfig
     {

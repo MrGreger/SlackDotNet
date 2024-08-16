@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace SlackBot.EventHandlers
+namespace SlackBotDotNet.EventHandlers
 {
     public class EventHandlerAttribute : Attribute
     {

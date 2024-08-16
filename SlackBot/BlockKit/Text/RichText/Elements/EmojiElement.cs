@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace SlackBot.Blocks
+namespace SlackBotDotNet.BlockKit.Text.RichText.Elements
 {
     public class EmojiElement : RichTextElementBase
     {

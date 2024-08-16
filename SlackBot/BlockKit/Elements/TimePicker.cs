@@ -1,8 +1,9 @@
 using Newtonsoft.Json;
-using SlackBot.Blocks.BaseBlocks;
-using SlackBot.Blocks.Dialog;
+using SlackBotDotNet.BlockKit.BaseBlocks;
+using SlackBotDotNet.BlockKit.Dialog;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Elements
+namespace SlackBotDotNet.BlockKit.Elements
 {
     public class TimePicker : ElementBase, ISectionElement, IActionsElement, IInputElement
     {

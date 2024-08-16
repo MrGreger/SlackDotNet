@@ -1,7 +1,8 @@
 using Newtonsoft.Json;
-using SlackBot.Blocks.BaseBlocks;
+using SlackBotDotNet.BlockKit.BaseBlocks;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Elements
+namespace SlackBotDotNet.BlockKit.Elements
 {
     public class WorkflowButton : ElementBase, ISectionElement, IActionsElement
     {

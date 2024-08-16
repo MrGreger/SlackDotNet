@@ -1,9 +1,6 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace SlackBot.Models
+namespace SlackBotDotNet.Models
 {
     public class SlackChannel
     {

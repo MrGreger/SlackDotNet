@@ -1,6 +1,7 @@
 using System;
+using SlackBotDotNet.BlockKit.Text.RichText.Elements;
 
-namespace SlackBot.Blocks.Builders.RichText.Elements
+namespace SlackBotDotNet.BlockKit.Builders.Elements.RichText.Elements
 {
     public interface IChannelConfigurator
     {

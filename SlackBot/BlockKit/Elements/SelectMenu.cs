@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using SlackBot.Blocks.BaseBlocks;
-using SlackBot.Blocks.Checkbox;
-using SlackBot.Blocks.Dialog;
+using SlackBotDotNet.BlockKit.BaseBlocks;
+using SlackBotDotNet.BlockKit.Dialog;
+using SlackBotDotNet.BlockKit.Options;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Elements
+namespace SlackBotDotNet.BlockKit.Elements
 {
     public class SelectMenu : ElementBase, ISectionElement, IActionsElement, IInputElement
     {

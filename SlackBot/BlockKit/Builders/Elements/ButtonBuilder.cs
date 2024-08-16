@@ -1,7 +1,9 @@
 using System;
-using SlackBot.Blocks.Dialog;
+using SlackBotDotNet.BlockKit.Dialog;
+using SlackBotDotNet.BlockKit.Elements;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Builders
+namespace SlackBotDotNet.BlockKit.Builders.Elements
 {
     public interface IButtonConfigurator
     {

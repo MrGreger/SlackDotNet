@@ -1,9 +1,9 @@
 using Newtonsoft.Json;
-using SlackBot.Blocks.Actions;
-using SlackBot.Blocks.BaseBlocks;
-using SlackBot.Blocks.Elements;
+using SlackBotDotNet.BlockKit.Actions;
+using SlackBotDotNet.BlockKit.BaseBlocks;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Builders
+namespace SlackBotDotNet.BlockKit.Elements
 {
     public class NumberInput : ElementBase, IInputElement
     {

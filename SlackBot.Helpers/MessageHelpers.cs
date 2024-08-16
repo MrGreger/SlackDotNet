@@ -1,7 +1,7 @@
-﻿using SlackBot.Messaging;
-using SlackBot.Options;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using SlackBotDotNet.Messaging;
+using SlackBotDotNet.Options;
 
 namespace SlackBot.Helpers
 {

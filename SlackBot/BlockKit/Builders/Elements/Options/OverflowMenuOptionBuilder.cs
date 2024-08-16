@@ -1,6 +1,7 @@
-using SlackBot.Blocks.Checkbox;
+using SlackBotDotNet.BlockKit.Options;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Builders
+namespace SlackBotDotNet.BlockKit.Builders.Elements.Options
 {
     public interface IOverflowMenuOptionConfigurator
     {

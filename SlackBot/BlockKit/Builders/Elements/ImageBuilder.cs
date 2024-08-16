@@ -1,4 +1,6 @@
-namespace SlackBot.Blocks.Builders
+using SlackBotDotNet.BlockKit.Elements;
+
+namespace SlackBotDotNet.BlockKit.Builders.Elements
 {
     public interface IImageConfigurator
     {

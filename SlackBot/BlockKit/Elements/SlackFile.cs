@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace SlackBot.Blocks
+namespace SlackBotDotNet.BlockKit.Elements
 {
     public class SlackFile
     {

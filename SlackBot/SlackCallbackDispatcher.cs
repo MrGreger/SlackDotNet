@@ -1,13 +1,10 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
 using System.Threading.Tasks;
-using SlackBot.EventHandlers;
-using SlackBot.Events;
+using Microsoft.Extensions.DependencyInjection;
+using SlackBotDotNet.EventHandlers;
+using SlackBotDotNet.Events;
 
-namespace SlackBot
+namespace SlackBotDotNet
 {
     public class SlackCallbackDispatcher
     {

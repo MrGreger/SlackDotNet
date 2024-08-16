@@ -1,4 +1,4 @@
-namespace SlackBot.Blocks.Checkbox
+namespace SlackBotDotNet.BlockKit.Options
 {
     public interface IOptionPayload
     {

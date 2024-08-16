@@ -1,8 +1,7 @@
 using Newtonsoft.Json;
-using SlackBot.Blocks.BaseBlocks;
-using SlackBot.Blocks.Elements;
+using SlackBotDotNet.BlockKit.BaseBlocks;
 
-namespace SlackBot.Blocks
+namespace SlackBotDotNet.BlockKit.Elements
 {
     public class Image : ElementBase, ISectionElement, IContextElement
     {

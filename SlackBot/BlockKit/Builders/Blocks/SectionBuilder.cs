@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
-using SlackBot.Blocks.BaseBlocks;
-using SlackBot.Blocks.Builders.Checkboxes;
-using SlackBot.Blocks.Builders.Text;
-using SlackBot.Blocks.Builders.Workflow;
-using ITextConfigurator = SlackBot.Blocks.Builders.RichText.Elements.ITextConfigurator;
+using SlackBotDotNet.BlockKit.Blocks;
+using SlackBotDotNet.BlockKit.Builders.Elements;
+using SlackBotDotNet.BlockKit.Builders.Elements.Checkboxes;
+using SlackBotDotNet.BlockKit.Builders.Elements.Workflow;
+using SlackBotDotNet.BlockKit.Builders.Text;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Builders
+namespace SlackBotDotNet.BlockKit.Builders.Blocks
 {
     public interface ISectionConfigurator : IButtonContainer<ISectionConfigurator>,
                                             ICheckboxesContainer<ISectionConfigurator>,

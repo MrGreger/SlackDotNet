@@ -1,4 +1,7 @@
-namespace SlackBot.Blocks.Builders.RichText.Elements
+using SlackBotDotNet.BlockKit.Text.RichText;
+using SlackBotDotNet.BlockKit.Text.RichText.Elements;
+
+namespace SlackBotDotNet.BlockKit.Builders.Elements.RichText
 {
     public interface IRichTextSectionConfigurator : IElementsContainerConfigurator
     {

@@ -1,10 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace SlackBot.Interactions
+namespace SlackBotDotNet.Interactions
 {
     public class InteractionDispatcher
     {

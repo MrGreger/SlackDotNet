@@ -1,7 +1,9 @@
 using System;
-using SlackBot.Blocks.Builders.Text;
+using SlackBotDotNet.BlockKit.Blocks;
+using SlackBotDotNet.BlockKit.Builders.Elements;
+using SlackBotDotNet.BlockKit.Builders.Text;
 
-namespace SlackBot.Blocks.Builders
+namespace SlackBotDotNet.BlockKit.Builders.Blocks
 {
     public interface IContextBlockConfigurator : ITextContainer<IContextBlockConfigurator>,
                                                  IImageContainer<IContextBlockConfigurator>

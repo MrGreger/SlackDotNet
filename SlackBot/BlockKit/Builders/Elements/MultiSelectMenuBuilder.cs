@@ -1,7 +1,10 @@
 using System;
 using System.Linq;
+using SlackBotDotNet.BlockKit.Builders.Elements.Options;
+using SlackBotDotNet.BlockKit.Elements;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Builders
+namespace SlackBotDotNet.BlockKit.Builders.Elements
 {
     public interface IMultiSelectMenuConfigurator
     {

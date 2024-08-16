@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using SlackBot.Blocks.Checkbox;
-using SlackBot.Blocks.Elements;
+using SlackBotDotNet.BlockKit.Builders.Elements.Options;
+using SlackBotDotNet.BlockKit.Elements;
+using SlackBotDotNet.BlockKit.Options;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks.Builders
+namespace SlackBotDotNet.BlockKit.Builders.Elements
 {
     public interface ISelectMenuConfigurator
     {

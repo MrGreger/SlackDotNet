@@ -1,4 +1,6 @@
-namespace SlackBot.Blocks.Builders
+using SlackBotDotNet.BlockKit.Blocks;
+
+namespace SlackBotDotNet.BlockKit.Builders.Blocks
 {
     public interface IDividerConfigurator
     {

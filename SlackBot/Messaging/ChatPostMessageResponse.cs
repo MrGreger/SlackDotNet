@@ -1,10 +1,7 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using SlackBot.Models;
+using SlackBotDotNet.Models;
 
-namespace SlackBot.Messaging
+namespace SlackBotDotNet.Messaging
 {
     public class ChatPostMessageResponse : SlackResponseBase<Message>
     {

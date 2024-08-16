@@ -1,7 +1,7 @@
 using System;
-using SlackBot.Blocks.Builders.RichText.Elements;
+using SlackBotDotNet.BlockKit.Text.RichText;
 
-namespace SlackBot.Blocks.Builders.RichText
+namespace SlackBotDotNet.BlockKit.Builders.Elements.RichText
 {
     public interface IRichTextListConfigurator
     {

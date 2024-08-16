@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using SlackBot.Blocks.BaseBlocks;
+using SlackBotDotNet.BlockKit.BaseBlocks;
 
-namespace SlackBot.Blocks
+namespace SlackBotDotNet.BlockKit.Blocks
 {
     public class ContextBlock : BlockBase
     {

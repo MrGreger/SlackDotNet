@@ -1,6 +1,6 @@
 using System;
 
-namespace SlackBot.Blocks.Builders.Workflow
+namespace SlackBotDotNet.BlockKit.Builders.Elements.Workflow
 {
     public interface IWorkflowTriggerConfigurator
     {
@@ -10,7 +10,7 @@ namespace SlackBot.Blocks.Builders.Workflow
     
     public class WorkflowTriggerBuilder:IWorkflowTriggerConfigurator
     {
-        private Blocks.Elements.Workflow.WorkflowTrigger _trigger = new Blocks.Elements.Workflow.WorkflowTrigger();
+        private BlockKit.Elements.Workflow.WorkflowTrigger _trigger = new BlockKit.Elements.Workflow.WorkflowTrigger();
         
         public IWorkflowTriggerConfigurator WithUrl(string url)
         {
@@ -21,7 +21,7 @@ namespace SlackBot.Blocks.Builders.Workflow
 
         public IWorkflowTriggerConfigurator WithInputParameter(string name, string value)
         {
-            _trigger.InputParameters.Add(new Blocks.Elements.Workflow.WorkflowTrigger.TriggerInputParameter()
+            _trigger.InputParameters.Add(new BlockKit.Elements.Workflow.WorkflowTrigger.TriggerInputParameter()
             {
                 Name = name,
                 Value = value
@@ -30,7 +30,7 @@ namespace SlackBot.Blocks.Builders.Workflow
             return this;
         }
 
-        public Blocks.Elements.Workflow.WorkflowTrigger Build()
+        public BlockKit.Elements.Workflow.WorkflowTrigger Build()
         {
             if (string.IsNullOrWhiteSpace(_trigger.Url))
             {

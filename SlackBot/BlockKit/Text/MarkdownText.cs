@@ -1,4 +1,4 @@
-namespace SlackBot.Blocks
+namespace SlackBotDotNet.BlockKit.Text
 {
     public class MarkdownText: TextAttribute
     {

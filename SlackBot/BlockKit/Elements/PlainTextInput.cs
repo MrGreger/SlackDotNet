@@ -1,12 +1,9 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using SlackBot.Blocks.Actions;
-using SlackBot.Blocks.BaseBlocks;
-using SlackBot.Blocks.Elements;
+using SlackBotDotNet.BlockKit.Actions;
+using SlackBotDotNet.BlockKit.BaseBlocks;
+using SlackBotDotNet.BlockKit.Text;
 
-namespace SlackBot.Blocks
+namespace SlackBotDotNet.BlockKit.Elements
 {
     public class PlainTextInput : ElementBase, IInputElement
     {
