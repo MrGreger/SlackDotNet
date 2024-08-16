@@ -1,29 +1,29 @@
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace SlackBot.Blocks
 {
     public class ChannelElementStyle
     {
-        [JsonPropertyName("bold")]
+        [JsonProperty("bold")]
         public bool Bold { get; set; }
-        [JsonPropertyName("italic")]
+        [JsonProperty("italic")]
         public bool Italic { get; set; }
-        [JsonPropertyName("strike")]
+        [JsonProperty("strike")]
         public bool Strike { get; set; }
-        [JsonPropertyName("highlight")]
+        [JsonProperty("highlight")]
         public bool Highlight { get; set; }
-        [JsonPropertyName("client_highlight")]
+        [JsonProperty("client_highlight")]
         public bool ClientHighlight { get; set; }
-        [JsonPropertyName("unlink")]
+        [JsonProperty("unlink")]
         public bool Unlink { get; set; }
     }
     
     public class ChannelElement : RichTextElementBase
     {
         public override string Type => RichTextElementTypes.Channel;
-        [JsonPropertyName("channel_id")]
+        [JsonProperty("channel_id")]
         public string Channel { get; set; }        
-        [JsonPropertyName("style")]
+        [JsonProperty("style")]
         public ChannelElementStyle Style { get; set; }
     }
 }

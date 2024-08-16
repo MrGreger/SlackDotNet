@@ -1,4 +1,4 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,13 +7,13 @@ namespace SlackBot.Interactions
 {
     public class InteractionAction
     {
-        [JsonPropertyName("action_id")]
+        [JsonProperty("action_id")]
         public string ActionId { get; set; }
-        [JsonPropertyName("block_id")]
+        [JsonProperty("block_id")]
         public string BlockId { get; set; }
-        [JsonPropertyName("value")]
+        [JsonProperty("value")]
         public string Value { get; set; }
-        [JsonPropertyName("type")]
+        [JsonProperty("type")]
         public string Type { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,7 +8,7 @@ namespace SlackBot.Messaging
 {
     public class ChatPostMessageResponse : SlackResponseBase<Message>
     {
-        [JsonPropertyName("message")]
+        [JsonProperty("message")]
         public override Message Content { get; set; }
     }
 }

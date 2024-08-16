@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using SlackBot.Blocks.BaseBlocks;
 
 namespace SlackBot.Blocks
@@ -7,7 +7,7 @@ namespace SlackBot.Blocks
     public class ContextBlock : BlockBase
     {
         public override string Type => BlockTypes.Context;
-        [JsonPropertyName("elements")]
+        [JsonProperty("elements")]
         public IList<ElementBase> Elements { get; set; }
     }
 }

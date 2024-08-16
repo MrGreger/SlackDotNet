@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace SlackBot.Blocks
 {
@@ -12,15 +12,15 @@ namespace SlackBot.Blocks
     public class RichTextListSection : RichTextSectionBase
     {
         public override string Type => RichTextSectionTypes.ListSection;
-        [JsonPropertyName("elements")]
+        [JsonProperty("elements")]
         public List<RichTextSection> Elements { get; set; } = new List<RichTextSection>();
-        [JsonPropertyName("style")]
+        [JsonProperty("style")]
         public string Style { get; set; }    
-        [JsonPropertyName("indent")]
+        [JsonProperty("indent")]
         public int Indent { get; set; }
-        [JsonPropertyName("offset")]
+        [JsonProperty("offset")]
         public int Offset { get; set; }
-        [JsonPropertyName("border")]
+        [JsonProperty("border")]
         public int Border { get; set; }
     }
 }

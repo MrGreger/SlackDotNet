@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
 using SlackBot.Events;
-using SlackBot.Helpers;
 
 namespace SlackBot.EventHandlers
 {
@@ -18,7 +16,7 @@ namespace SlackBot.EventHandlers
     {
         public override Task HandleEvent(SlackCallback payload)
         {
-            return OnEvent(payload.EventObject.Deserialize<T>(SlackSerialization.SerializerOptions));
+            return OnEvent(payload.EventObject.ToObject<T>());
         }
 
         protected abstract Task OnEvent(T payload);

@@ -1,4 +1,4 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,9 +7,9 @@ namespace SlackBot.Blocks.BaseBlocks
 {
     public abstract class BlockBase
     {
-        [JsonPropertyName("type")]
+        [JsonProperty("type")]
         public abstract string Type { get; }
-        [JsonPropertyName("block_id")]
+        [JsonProperty("block_id")]
         public string BlockId { get; set; }
     }
 }

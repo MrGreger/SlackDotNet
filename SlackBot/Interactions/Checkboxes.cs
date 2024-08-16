@@ -1,6 +1,6 @@
 ﻿using SlackBot.Blocks;
 using SlackBot.Blocks.Checkbox;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,15 +12,15 @@ namespace SlackBot.Interactions.Elements
     {
         public class CheckboxesAction
         {
-            [JsonPropertyName("selected_options")]
+            [JsonProperty("selected_options")]
             public CheckboxOption[] Options { get; set; }
-            [JsonPropertyName("type")]
+            [JsonProperty("type")]
             public string Type { get; set; }
         }
 
         public class CheckboxOption
         {
-            [JsonPropertyName("value")]
+            [JsonProperty("value")]
             public string Value
             {
                 get;
@@ -28,7 +28,7 @@ namespace SlackBot.Interactions.Elements
             }
         }
 
-        [JsonPropertyName("checkboxes-action")]
+        [JsonProperty("checkboxes-action")]
         public CheckboxesAction InputAction { get; set; }
 
         public IEnumerable<CheckboxOption> SelectedOptions => InputAction.Options;

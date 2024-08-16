@@ -1,4 +1,4 @@
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using SlackBot.Blocks.BaseBlocks;
 using SlackBot.Blocks.Checkbox;
 using SlackBot.Blocks.Dialog;
@@ -10,7 +10,7 @@ namespace SlackBot.Blocks.Elements
         
         public class OverflowMenuOption
         {
-            [JsonPropertyName("value")]
+            [JsonProperty("value")]
             public string Value
             {
                 get;
@@ -19,11 +19,11 @@ namespace SlackBot.Blocks.Elements
         }
         
         public override string Type => ElementTypes.OverflowMenu;
-        [JsonPropertyName("action_id")]
+        [JsonProperty("action_id")]
         public string ActionId { get; set; }
-        [JsonPropertyName("options")]
+        [JsonProperty("options")]
         public InputOption[] Options { get; set; }
-        [JsonPropertyName("confirm")]
+        [JsonProperty("confirm")]
         public ConfirmationDialog Confirmation { get; set; }
     }
 }

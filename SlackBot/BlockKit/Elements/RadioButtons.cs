@@ -1,4 +1,4 @@
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using SlackBot.Blocks.BaseBlocks;
 using SlackBot.Blocks.Checkbox;
 using SlackBot.Blocks.Dialog;
@@ -8,15 +8,15 @@ namespace SlackBot.Blocks.Elements
     public class RadioButtons : ElementBase, ISectionElement, IActionsElement, IInputElement
     {
         public override string Type => ElementTypes.RadioButtons;
-        [JsonPropertyName("action_id")]
+        [JsonProperty("action_id")]
         public string ActionId { get; set; }
-        [JsonPropertyName("options")]
+        [JsonProperty("options")]
         public InputOption[] Options { get; set; }
-        [JsonPropertyName("confirm")]
+        [JsonProperty("confirm")]
         public ConfirmationDialog Confirmation { get; set; }
-        [JsonPropertyName("initial_option")]
+        [JsonProperty("initial_option")]
         public InputOption InitialOption { get; set; }        
-        [JsonPropertyName("focus_on_load")]
+        [JsonProperty("focus_on_load")]
         public bool FocusOnLoad { get; set; }
     }
 }

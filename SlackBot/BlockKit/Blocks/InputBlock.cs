@@ -1,4 +1,4 @@
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using SlackBot.Blocks.BaseBlocks;
 using SlackBot.Blocks.Elements;
 
@@ -7,15 +7,15 @@ namespace SlackBot.Blocks
     public class InputBlock : BlockBase
     {
         public override string Type => BlockTypes.Input;
-        [JsonPropertyName("label")]
+        [JsonProperty("label")]
         public PlainText Label { get; set; }       
-        [JsonPropertyName("element")]
+        [JsonProperty("element")]
         public IInputElement Element { get; set; }
-        [JsonPropertyName("dispatch_action")]
+        [JsonProperty("dispatch_action")]
         public bool DispatchAction { get; set; }     
-        [JsonPropertyName("hint")]
+        [JsonProperty("hint")]
         public PlainText Hint { get; set; }
-        [JsonPropertyName("optional")]
+        [JsonProperty("optional")]
         public bool Optional { get; set; }
     }
 }

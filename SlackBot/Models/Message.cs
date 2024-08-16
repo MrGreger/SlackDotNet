@@ -1,22 +1,22 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Text.Json.Nodes;
 
 namespace SlackBot.Models
 {
     public class Message
     {
-        [JsonPropertyName("text")]
+        [JsonProperty("text")]
         public string Text { get; set; }
-        [JsonPropertyName("blocks")]
-        public JsonNode[] Blocks { get; set; }
-        [JsonPropertyName("type")]
+        [JsonProperty("blocks")]
+        public JObject[] Blocks { get; set; }
+        [JsonProperty("type")]
         public string Type { get; set; }
-        [JsonPropertyName("ts")]
+        [JsonProperty("ts")]
         public string Ts { get; set; }
-        [JsonPropertyName("thread_ts")]
+        [JsonProperty("thread_ts")]
         public string ThreadTs { get; set; }
     }
 }

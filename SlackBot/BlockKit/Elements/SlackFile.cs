@@ -1,12 +1,12 @@
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace SlackBot.Blocks
 {
     public class SlackFile
     {
-        [JsonPropertyName("url")]
+        [JsonProperty("url")]
         public string Url { get; set; }
-        [JsonPropertyName("id")]
+        [JsonProperty("id")]
         public string Id { get; set; }
 
         public static SlackFile FromUrl(string url)

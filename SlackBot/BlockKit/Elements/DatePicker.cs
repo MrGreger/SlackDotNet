@@ -1,4 +1,4 @@
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using SlackBot.Blocks.BaseBlocks;
 using SlackBot.Blocks.Dialog;
 using SlackBot.Blocks.Elements;
@@ -8,15 +8,15 @@ namespace SlackBot.Blocks
     public class DatePicker : ElementBase, ISectionElement, IActionsElement, IInputElement
     {
         public override string Type => ElementTypes.DatePicker;
-        [JsonPropertyName("action_id")]
+        [JsonProperty("action_id")]
         public string ActionId { get; set; }
-        [JsonPropertyName("initial_date")]
+        [JsonProperty("initial_date")]
         public string InitialDate { get; set; }
-        [JsonPropertyName("confirm")]
+        [JsonProperty("confirm")]
         public ConfirmationDialog ConfirmationDialog { get; set; }
-        [JsonPropertyName("focus_on_load")]
+        [JsonProperty("focus_on_load")]
         public bool FocusOnLoad { get; set; }
-        [JsonPropertyName("placeholder")]
+        [JsonProperty("placeholder")]
         public PlainText Placeholder { get; set; }
     }
 }

@@ -1,12 +1,10 @@
 ﻿using Microsoft.Extensions.Options;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
-using SlackBot.Helpers;
 using SlackBot.Models;
 using SlackBot.Options;
 
@@ -25,10 +23,8 @@ namespace SlackBot.Messaging
 
         public async Task<TResponse> SendRequestToSlack<TResponse>(string method, object data)
         {
-            var requestContent = new StringContent(SlackSerialization.Serialize(data),
-                                                   Encoding.UTF8, "application/json");
-            _httpClient.DefaultRequestHeaders.Authorization =
-                new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", _botOptions.Token);
+            var requestContent = new StringContent(JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json");
+            _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", _botOptions.Token);
 
             var response = await _httpClient.PostAsync($"https://slack.com/api/{method}", requestContent);
 
@@ -40,7 +36,7 @@ namespace SlackBot.Messaging
                 throw new Exception(content);
             }
 
-            var result = SlackSerialization.Deserialize<TResponse>(content);
+            var result = JsonConvert.DeserializeObject<TResponse>(content);
 
             return result;
         }
@@ -54,7 +50,6 @@ namespace SlackBot.Messaging
         {
             return await SendRequestToSlack<ChatPostMessageResponse>("chat.postMessage", message);
         }
-
         public async Task<ChatPostMessageResponse> UpdateSlackMessage(UpdateSlackMessageRequest message)
         {
             return await SendRequestToSlack<ChatPostMessageResponse>("chat.update", message);
@@ -62,10 +57,7 @@ namespace SlackBot.Messaging
 
         public async Task<ConversationsRepliesResponse> GetReplies(string channel, string ts)
         {
-            return
-                await
-                    SendRequestToSlack<ConversationsRepliesResponse>($"conversations.replies?channel={channel}&ts={ts}",
-                                                                     null);
+            return await SendRequestToSlack<ConversationsRepliesResponse>($"conversations.replies?channel={channel}&ts={ts}", null);
         }
 
         public async Task<User> GetUser(string userId)
@@ -85,13 +77,11 @@ namespace SlackBot.Messaging
             {
                 var usersList = string.Join(',', userIds);
 
-                return await SendRequestToSlack<ConversationsOpenResponse>("conversations.open",
-                                                                           new { users = usersList });
+                return await SendRequestToSlack<ConversationsOpenResponse>("conversations.open", new { users = usersList });
             }
             else
             {
-                return await SendRequestToSlack<ConversationsOpenResponse>("conversations.open",
-                                                                           new { channel = channelId });
+                return await SendRequestToSlack<ConversationsOpenResponse>("conversations.open", new { channel = channelId });
             }
         }
 
