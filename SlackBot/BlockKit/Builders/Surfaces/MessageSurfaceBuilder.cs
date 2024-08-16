@@ -121,5 +121,10 @@ namespace SlackBot.Blocks.Builders
 
             return this;
         }
+
+        public string Build()
+        {
+            return _container.Serialize();
+        }
     }
 }

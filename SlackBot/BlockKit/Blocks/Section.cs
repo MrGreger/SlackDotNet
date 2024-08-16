@@ -14,7 +14,7 @@ namespace SlackBot.Blocks
         [JsonProperty("text")]
         public TextAttribute Text { get; set; }
         [JsonProperty("fields")]
-        public List<TextAttribute> Fields { get; set; } = new List<TextAttribute>();
+        public List<TextAttribute> Fields { get; set; }
         [JsonProperty("accessory")]
         public ISectionElement Accessory { get; set; }
     }

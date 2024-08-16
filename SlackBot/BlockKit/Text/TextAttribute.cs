@@ -19,7 +19,7 @@ namespace SlackBot.Blocks
         [JsonProperty("emoji")]
         public bool Emoji { get; set; }        
         [JsonProperty("verbatim")]
-        public bool Verbatim { get; set; }
+        public bool? Verbatim { get; set; }
         [JsonProperty("text")]
         public string Value { get; set; }
     }
