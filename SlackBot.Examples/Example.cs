@@ -12,12 +12,12 @@ public class Example
         new ContextBlockBuilder().WithText(x =>
                                                x.Markdown()
                                                 .Verbatim()
-                                                .Emoji()
+                                                .WithEmoji()
                                                 .WithText("123")
                                           ).WithText(x =>
                                                      {
                                                          x.Plain()
-                                                          .Emoji()
+                                                          .WithEmoji()
                                                           .WithText("321");
                                                      });
 

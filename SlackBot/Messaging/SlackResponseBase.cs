@@ -9,17 +9,17 @@ namespace SlackBot.Messaging
     {
         [JsonProperty("ok")]
         public bool Success { get; set; }
-        [JsonPropertyName("error")]
+        [JsonProperty("error")]
         public string ErrorMessage { get; set; }
-        [JsonPropertyName("response_metadata")]
+        [JsonProperty("response_metadata")]
         public SlackResponseMetadata Metadata { get; set; }
     }
 
     public class SlackResponseMetadata
     {
-        [JsonPropertyName("warnings")]
+        [JsonProperty("warnings")]
         public string[] Warnings { get; set; }
-        [JsonPropertyName("messages")]
+        [JsonProperty("messages")]
         public string[] Messages { get; set; }
     }
 
