@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HttpSlackBot.Interactions.Elements
+namespace SlackBot.Interactions.Elements
 {
     public class DatePicker
     {

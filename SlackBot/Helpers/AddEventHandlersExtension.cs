@@ -1,12 +1,12 @@
-﻿using HttpSlackBot.CommandHandlers;
-using HttpSlackBot.EventHandlers;
+﻿using SlackBot.CommandHandlers;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
+using SlackBot.EventHandlers;
 
-namespace HttpSlackBot.Helpers
+namespace SlackBot.Helpers
 {
     public static class AddEventHandlerExtension
     {

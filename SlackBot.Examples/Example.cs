@@ -1,4 +1,4 @@
-﻿using HttpSlackBot.Blocks.Builders;
+﻿using SlackBot.Blocks.Builders;
 
 namespace SlackBot.Examples;
 

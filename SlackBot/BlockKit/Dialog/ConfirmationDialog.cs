@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace HttpSlackBot.Blocks.Dialog
+namespace SlackBot.Blocks.Dialog
 {
     public class ConfirmationDialog
     {

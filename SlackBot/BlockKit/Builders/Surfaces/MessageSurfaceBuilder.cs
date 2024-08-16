@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using HttpSlackBot.BlockKit.Builders.Blocks;
-using HttpSlackBot.Blocks.BaseBlocks;
-using HttpSlackBot.Blocks.Builders.RichText;
+using SlackBot.Blocks.BaseBlocks;
+using SlackBot.BlockKit.Builders.Blocks;
+using SlackBot.Blocks.Builders.RichText;
 
-namespace HttpSlackBot.Blocks.Builders
+namespace SlackBot.Blocks.Builders
 {
     public interface IMessageSurfaceBuilder
     {

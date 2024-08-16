@@ -1,6 +1,6 @@
-using HttpSlackBot.Blocks.Builders.RichText;
+using SlackBot.Blocks.Builders.RichText;
 
-namespace HttpSlackBot.Blocks.Builders.Elements.RichText
+namespace SlackBot.Blocks.Builders.Elements.RichText
 {
     public interface IRichTextPreformattedConfigurator : IElementsContainerConfigurator
     {

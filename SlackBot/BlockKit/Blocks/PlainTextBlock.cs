@@ -1,10 +1,10 @@
-﻿using HttpSlackBot.Blocks.BaseBlocks;
+﻿using SlackBot.Blocks.BaseBlocks;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HttpSlackBot.Blocks
+namespace SlackBot.Blocks
 {
     public class PlainTextBlock : Section
     {

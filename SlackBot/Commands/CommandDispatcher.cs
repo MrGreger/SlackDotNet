@@ -1,11 +1,11 @@
-﻿using HttpSlackBot.CommandHandlers;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using SlackBot.CommandHandlers;
 
-namespace HttpSlackBot.Commands
+namespace SlackBot.Commands
 {
     public class CommandDispatcher
     {

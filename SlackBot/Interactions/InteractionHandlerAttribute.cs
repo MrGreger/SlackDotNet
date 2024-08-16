@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HttpSlackBot.Interactions
+namespace SlackBot.Interactions
 {
     public class InteractionHandlerAttribute : Attribute
     {

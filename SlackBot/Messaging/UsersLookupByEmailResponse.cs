@@ -1,10 +1,10 @@
-﻿using HttpSlackBot.Models;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using SlackBot.Models;
 
-namespace HttpSlackBot.Messaging
+namespace SlackBot.Messaging
 {
     public class UsersLookupByEmailResponse : SlackResponseBase<User>
     {

@@ -1,7 +1,7 @@
 using System;
-using HttpSlackBot.Blocks.Builders.Text;
+using SlackBot.Blocks.Builders.Text;
 
-namespace HttpSlackBot.Blocks.Builders
+namespace SlackBot.Blocks.Builders
 {
     public interface IImageBlockConfigurator
     {

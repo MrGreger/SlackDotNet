@@ -1,13 +1,13 @@
-﻿using HttpSlackBot.Blocks.BaseBlocks;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HttpSlackBot.Blocks.Dialog;
-using HttpSlackBot.Blocks.Elements;
+using SlackBot.Blocks.BaseBlocks;
+using SlackBot.Blocks.Dialog;
+using SlackBot.Blocks.Elements;
 
-namespace HttpSlackBot.Blocks.Checkbox
+namespace SlackBot.Blocks.Checkbox
 {
     public class Checkboxes : ElementBase, ISectionElement, IActionsElement, IInputElement
     {

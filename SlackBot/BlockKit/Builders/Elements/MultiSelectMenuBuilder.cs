@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace HttpSlackBot.Blocks.Builders
+namespace SlackBot.Blocks.Builders
 {
     public interface IMultiSelectMenuConfigurator
     {

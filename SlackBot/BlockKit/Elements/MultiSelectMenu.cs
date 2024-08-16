@@ -1,11 +1,11 @@
 using System.Collections.Generic;
-using HttpSlackBot.Blocks.BaseBlocks;
-using HttpSlackBot.Blocks.Checkbox;
-using HttpSlackBot.Blocks.Dialog;
-using HttpSlackBot.Blocks.Elements;
 using Newtonsoft.Json;
+using SlackBot.Blocks.BaseBlocks;
+using SlackBot.Blocks.Checkbox;
+using SlackBot.Blocks.Dialog;
+using SlackBot.Blocks.Elements;
 
-namespace HttpSlackBot.Blocks
+namespace SlackBot.Blocks
 {
     public class MultiSelectMenu : ElementBase, ISectionElement, IActionsElement, IInputElement
     {

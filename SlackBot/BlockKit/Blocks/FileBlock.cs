@@ -1,7 +1,7 @@
-using HttpSlackBot.Blocks.BaseBlocks;
 using Newtonsoft.Json;
+using SlackBot.Blocks.BaseBlocks;
 
-namespace HttpSlackBot.Blocks
+namespace SlackBot.Blocks
 {
     public class FileBlock : BlockBase
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HttpSlackBot.Interactions
+namespace SlackBot.Interactions
 {
     public abstract class InteractionHandler
     {

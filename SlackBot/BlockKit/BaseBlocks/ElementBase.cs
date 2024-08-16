@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace HttpSlackBot.Blocks.BaseBlocks
+namespace SlackBot.Blocks.BaseBlocks
 {
     public abstract class ElementBase
     {

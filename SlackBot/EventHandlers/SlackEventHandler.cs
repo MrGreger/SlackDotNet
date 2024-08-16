@@ -1,10 +1,10 @@
-﻿using HttpSlackBot.Events;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using SlackBot.Events;
 
-namespace HttpSlackBot.EventHandlers
+namespace SlackBot.EventHandlers
 {
 
     public abstract class SlackEventHandler

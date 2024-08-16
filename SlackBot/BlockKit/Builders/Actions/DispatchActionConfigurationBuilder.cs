@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using HttpSlackBot.Blocks.Actions;
+using SlackBot.Blocks.Actions;
 
-namespace HttpSlackBot.Blocks.Builders.Actions
+namespace SlackBot.Blocks.Builders.Actions
 {
     
     public interface IDispatchActionConfigurator

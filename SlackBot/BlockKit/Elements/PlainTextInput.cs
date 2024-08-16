@@ -1,12 +1,12 @@
-﻿using HttpSlackBot.Blocks.BaseBlocks;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using HttpSlackBot.Blocks.Actions;
-using HttpSlackBot.Blocks.Elements;
+using SlackBot.Blocks.Actions;
+using SlackBot.Blocks.BaseBlocks;
+using SlackBot.Blocks.Elements;
 
-namespace HttpSlackBot.Blocks
+namespace SlackBot.Blocks
 {
     public class PlainTextInput : ElementBase, IInputElement
     {

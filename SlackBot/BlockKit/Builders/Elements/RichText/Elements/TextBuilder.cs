@@ -1,4 +1,4 @@
-namespace HttpSlackBot.Blocks.Builders.RichText.Elements
+namespace SlackBot.Blocks.Builders.RichText.Elements
 {
     public interface ITextConfigurator
     {

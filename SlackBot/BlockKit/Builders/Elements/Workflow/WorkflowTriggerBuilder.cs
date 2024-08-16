@@ -1,6 +1,6 @@
 using System;
 
-namespace HttpSlackBot.Blocks.Builders.Workflow
+namespace SlackBot.Blocks.Builders.Workflow
 {
     public interface IWorkflowTriggerConfigurator
     {

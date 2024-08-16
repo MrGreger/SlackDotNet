@@ -1,8 +1,8 @@
-using HttpSlackBot.Blocks.BaseBlocks;
-using HttpSlackBot.Blocks.Dialog;
 using Newtonsoft.Json;
+using SlackBot.Blocks.BaseBlocks;
+using SlackBot.Blocks.Dialog;
 
-namespace HttpSlackBot.Blocks.Elements
+namespace SlackBot.Blocks.Elements
 {
     public class DateTimePicker : ElementBase, IActionsElement, IInputElement
     {

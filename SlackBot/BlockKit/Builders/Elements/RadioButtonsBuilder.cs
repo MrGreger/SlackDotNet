@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using HttpSlackBot.Blocks.Checkbox;
-using HttpSlackBot.Blocks.Elements;
+using SlackBot.Blocks.Checkbox;
+using SlackBot.Blocks.Elements;
 
-namespace HttpSlackBot.Blocks.Builders
+namespace SlackBot.Blocks.Builders
 {
     public interface IRadioButtonsConfigurator
     {

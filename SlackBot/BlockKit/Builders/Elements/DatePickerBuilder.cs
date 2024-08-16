@@ -1,6 +1,6 @@
 using System;
 
-namespace HttpSlackBot.Blocks.Builders
+namespace SlackBot.Blocks.Builders
 {
     public interface IDatePickerConfigurator
     {

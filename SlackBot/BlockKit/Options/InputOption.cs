@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HttpSlackBot.Blocks.Checkbox
+namespace SlackBot.Blocks.Checkbox
 {
     public class InputOption : IOptionPayload
     {

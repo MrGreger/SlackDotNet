@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using HttpSlackBot.Blocks.Checkbox;
+using SlackBot.Blocks.Checkbox;
 
-namespace HttpSlackBot.Blocks.Builders
+namespace SlackBot.Blocks.Builders
 {
     public interface ISelectMenuOptionGroupConfigurator
     {

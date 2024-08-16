@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace HttpSlackBot.Helpers
+namespace SlackBot.Helpers
 {
     public static class TypeHelpers
     {

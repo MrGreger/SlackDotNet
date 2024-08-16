@@ -1,10 +1,10 @@
-﻿using HttpSlackBot.Blocks.BaseBlocks;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using SlackBot.Blocks.BaseBlocks;
 
-namespace HttpSlackBot.Blocks
+namespace SlackBot.Blocks
 {
     public class MessageSurface
     {

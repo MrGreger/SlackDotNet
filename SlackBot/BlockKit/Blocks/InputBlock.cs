@@ -1,8 +1,8 @@
-using HttpSlackBot.Blocks.BaseBlocks;
-using HttpSlackBot.Blocks.Elements;
 using Newtonsoft.Json;
+using SlackBot.Blocks.BaseBlocks;
+using SlackBot.Blocks.Elements;
 
-namespace HttpSlackBot.Blocks
+namespace SlackBot.Blocks
 {
     public class InputBlock : BlockBase
     {

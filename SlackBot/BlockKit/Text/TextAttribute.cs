@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using HttpSlackBot.Blocks.BaseBlocks;
+using SlackBot.Blocks.BaseBlocks;
 
-namespace HttpSlackBot.Blocks
+namespace SlackBot.Blocks
 {
     public class TextAttribute : ElementBase
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HttpSlackBot.EventHandlers
+namespace SlackBot.EventHandlers
 {
     public class EventHandlerAttribute : Attribute
     {

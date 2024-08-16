@@ -1,6 +1,6 @@
-using HttpSlackBot.Blocks.Dialog;
+using SlackBot.Blocks.Dialog;
 
-namespace HttpSlackBot.Blocks.Builders
+namespace SlackBot.Blocks.Builders
 {
     public interface IConfirmationDialogConfigurator
     {

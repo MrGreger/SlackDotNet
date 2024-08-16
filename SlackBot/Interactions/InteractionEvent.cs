@@ -1,12 +1,12 @@
-﻿using HttpSlackBot.Models;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SlackBot.Models;
 
-namespace HttpSlackBot.Interactions
+namespace SlackBot.Interactions
 {
     public class InteractionEvent
     {

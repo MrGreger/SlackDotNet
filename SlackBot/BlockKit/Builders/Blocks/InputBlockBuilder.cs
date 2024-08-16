@@ -1,7 +1,7 @@
 using System;
-using HttpSlackBot.Blocks.Builders.Checkboxes;
+using SlackBot.Blocks.Builders.Checkboxes;
 
-namespace HttpSlackBot.Blocks.Builders
+namespace SlackBot.Blocks.Builders
 {
     public interface IInputBlockConfigurator : ICheckboxesContainer<IInputBlockConfigurator>,
                                                  IDatePickerContainer<IInputBlockConfigurator>,

@@ -1,5 +1,5 @@
-﻿using HttpSlackBot.Messaging;
-using HttpSlackBot.Options;
+﻿using SlackBot.Messaging;
+using SlackBot.Options;
 using System;
 using System.Threading.Tasks;
 

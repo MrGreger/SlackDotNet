@@ -1,8 +1,8 @@
 using System;
-using HttpSlackBot.Blocks.Builders.Actions;
-using HttpSlackBot.Blocks.Elements;
+using SlackBot.Blocks.Builders.Actions;
+using SlackBot.Blocks.Elements;
 
-namespace HttpSlackBot.Blocks.Builders
+namespace SlackBot.Blocks.Builders
 {
     public interface IUrlInputElementConfigurator
     {

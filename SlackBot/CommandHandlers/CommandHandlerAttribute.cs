@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HttpSlackBot.CommandHandlers
+namespace SlackBot.CommandHandlers
 {
     public class CommandHandlerAttribute : Attribute
     {

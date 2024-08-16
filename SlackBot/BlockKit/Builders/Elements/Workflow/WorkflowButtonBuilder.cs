@@ -1,7 +1,7 @@
 using System;
-using HttpSlackBot.Blocks.Elements;
+using SlackBot.Blocks.Elements;
 
-namespace HttpSlackBot.Blocks.Builders.Workflow
+namespace SlackBot.Blocks.Builders.Workflow
 {
     public interface IWorkflowButtonConfigurator
     {

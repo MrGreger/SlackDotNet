@@ -1,6 +1,6 @@
 using System;
 
-namespace HttpSlackBot.Blocks.Builders.Text
+namespace SlackBot.Blocks.Builders.Text
 {
     public interface ITextConfiguratorBase<T>
     {

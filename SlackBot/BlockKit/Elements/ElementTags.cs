@@ -1,4 +1,4 @@
-namespace HttpSlackBot.Blocks.Elements
+namespace SlackBot.Blocks.Elements
 {
     public interface IInputElement
     {

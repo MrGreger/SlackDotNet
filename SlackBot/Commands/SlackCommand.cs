@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HttpSlackBot.Commands
+namespace SlackBot.Commands
 {
     public class SlackCommand
     {

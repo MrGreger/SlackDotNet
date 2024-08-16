@@ -1,9 +1,9 @@
 using System;
-using HttpSlackBot.Blocks.Builders.Checkboxes;
-using HttpSlackBot.Blocks.Builders.Text;
-using HttpSlackBot.Blocks.Builders.Workflow;
+using SlackBot.Blocks.Builders.Checkboxes;
+using SlackBot.Blocks.Builders.Text;
+using SlackBot.Blocks.Builders.Workflow;
 
-namespace HttpSlackBot.Blocks.Builders
+namespace SlackBot.Blocks.Builders
 {
     public interface IElementContainer<T>
     {

@@ -1,8 +1,8 @@
 using System;
-using HttpSlackBot.Blocks;
-using HttpSlackBot.Blocks.Builders.Text;
+using SlackBot.Blocks;
+using SlackBot.Blocks.Builders.Text;
 
-namespace HttpSlackBot.BlockKit.Builders.Blocks
+namespace SlackBot.BlockKit.Builders.Blocks
 {
     /// <summary>
     /// https://api.slack.com/reference/block-kit/blocks#video

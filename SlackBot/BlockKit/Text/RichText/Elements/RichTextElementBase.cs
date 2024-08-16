@@ -1,4 +1,4 @@
-namespace HttpSlackBot.Blocks
+namespace SlackBot.Blocks
 {
     public class RichTextElementTypes
     {

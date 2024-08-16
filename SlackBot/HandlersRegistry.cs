@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HttpSlackBot
+namespace SlackBot
 {
     public class HandlersRegistry<THandler>
     {

@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace HttpSlackBot.Blocks
+namespace SlackBot.Blocks
 {
     public class UserElementStyle
     {

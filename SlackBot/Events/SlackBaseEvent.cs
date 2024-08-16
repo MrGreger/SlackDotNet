@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HttpSlackBot.Events
+namespace SlackBot.Events
 {
     public class SlackBaseEvent
     {

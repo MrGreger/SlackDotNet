@@ -1,11 +1,11 @@
-﻿using HttpSlackBot.Interactions;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
+using SlackBot.Interactions;
 
-namespace HttpSlackBot.Helpers
+namespace SlackBot.Helpers
 {
     public static class AddInteractionHandlerExtension
     {

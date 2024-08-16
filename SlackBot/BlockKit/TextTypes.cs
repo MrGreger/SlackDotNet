@@ -1,6 +1,6 @@
 using System;
 
-namespace HttpSlackBot.Blocks
+namespace SlackBot.Blocks
 {
     public enum TextType
     {

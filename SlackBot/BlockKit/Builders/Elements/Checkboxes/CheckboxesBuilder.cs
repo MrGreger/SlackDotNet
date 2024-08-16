@@ -1,6 +1,6 @@
 using System;
 
-namespace HttpSlackBot.Blocks.Builders.Checkboxes
+namespace SlackBot.Blocks.Builders.Checkboxes
 {
     public interface ICheckboxesConfigurator
     {

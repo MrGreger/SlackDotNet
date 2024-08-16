@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HttpSlackBot.Blocks.BaseBlocks
+namespace SlackBot.Blocks.BaseBlocks
 {
     public abstract class BlockBase
     {
