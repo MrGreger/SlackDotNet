@@ -4,6 +4,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>SlackBotDotNet</RootNamespace>
     <AssemblyName>SlackBotDotNet</AssemblyName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/MrGreger/SlackDotNet</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
