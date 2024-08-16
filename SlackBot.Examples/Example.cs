@@ -48,7 +48,7 @@ public class Example
                                                                                                   {
                                                                                                       x.WithText(x => x
                                                                                                                      .Markdown("mrkdwn")
-                                                                                                                     .Emoji(false)
+                                                                                                                     .WithEmoji(false)
                                                                                                                      .Verbatim())
                                                                                                        .WithValue("1")
                                                                                                        .Selected();
