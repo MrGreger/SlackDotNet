@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,15 +7,15 @@ namespace SlackBot.Messaging
 {
     public class SlackMessage
     {
-        [JsonProperty("channel")]
+        [JsonPropertyName("channel")]
         public string Channel { get; set; }
-        [JsonProperty("blocks")]
+        [JsonPropertyName("blocks")]
         public string Blocks { get; set; }
-        [JsonProperty("text")]
+        [JsonPropertyName("text")]
         public string Text { get; set; }
-        [JsonProperty("ts")]
+        [JsonPropertyName("ts")]
         public string Ts {get;set;}
-        [JsonProperty("thread_ts")]
+        [JsonPropertyName("thread_ts")]
         public string ThreadTs { get; set; }
     }
 }

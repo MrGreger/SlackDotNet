@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,13 +14,13 @@ namespace SlackBot.Blocks
             Emoji = emoji;
         }
 
-        [JsonProperty("type")]
+        [JsonPropertyName("type")]
         public override string Type { get; }
-        [JsonProperty("emoji")]
+        [JsonPropertyName("emoji")]
         public bool Emoji { get; set; }        
-        [JsonProperty("verbatim")]
+        [JsonPropertyName("verbatim")]
         public bool Verbatim { get; set; }
-        [JsonProperty("text")]
+        [JsonPropertyName("text")]
         public string Value { get; set; }
     }
 }

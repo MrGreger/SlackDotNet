@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 using SlackBot.Blocks.BaseBlocks;
 
 namespace SlackBot.Blocks
@@ -6,13 +6,13 @@ namespace SlackBot.Blocks
     public class ImageBlock : BlockBase
     {
         public override string Type => BlockTypes.Image;
-        [JsonProperty("alt_text")]
+        [JsonPropertyName("alt_text")]
         public string AltText { get; set; }
-        [JsonProperty("image_url")]
+        [JsonPropertyName("image_url")]
         public string ImageUrl { get; set; }
-        [JsonProperty("slack_file")]
+        [JsonPropertyName("slack_file")]
         public SlackFile SlackFile { get; set; }
-        [JsonProperty("text")]
+        [JsonPropertyName("text")]
         public PlainText Title { get; set; }
     }
 }

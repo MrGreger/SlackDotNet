@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 using SlackBot.Blocks.BaseBlocks;
 using SlackBot.Blocks.Checkbox;
 using SlackBot.Blocks.Dialog;
@@ -10,21 +10,21 @@ namespace SlackBot.Blocks
     public class MultiSelectMenu : ElementBase, ISectionElement, IActionsElement, IInputElement
     {
         public override string Type => ElementTypes.MultiSelectMenu;
-        [JsonProperty("action_id")]
+        [JsonPropertyName("action_id")]
         public string ActionId { get; set; }
-        [JsonProperty("options")]
+        [JsonPropertyName("options")]
         public IList<InputOption> Options { get; set; }
-        [JsonProperty("option_groups")]
+        [JsonPropertyName("option_groups")]
         public IList<InputOptionGroup> OptionGroups { get; set; }
-        [JsonProperty("initial_option")]
+        [JsonPropertyName("initial_option")]
         public InputOption InitialOption { get; set; }
-        [JsonProperty("initial_option")]
+        [JsonPropertyName("initial_option")]
         public InputOptionGroup InitialOptionGroup { get; set; }
-        [JsonProperty("confirm")]
+        [JsonPropertyName("confirm")]
         public ConfirmationDialog ConfirmationDialog { get; set; }
-        [JsonProperty("focus_on_load")]
+        [JsonPropertyName("focus_on_load")]
         public bool FocusOnLoad { get; set; }
-        [JsonProperty("placeholder")]
+        [JsonPropertyName("placeholder")]
         public PlainText Placeholder { get; set; }
     }
 }

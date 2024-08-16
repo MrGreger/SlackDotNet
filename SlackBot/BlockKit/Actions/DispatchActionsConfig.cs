@@ -1,10 +1,10 @@
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace SlackBot.Blocks.Actions
 {
     public class DispatchActionsConfig
     {
-        [JsonProperty("trigger_actions_on")]
+        [JsonPropertyName("trigger_actions_on")]
         public string[] TriggersOn { get; set; }
     }
 }

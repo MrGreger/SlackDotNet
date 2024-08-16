@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,19 +7,19 @@ namespace SlackBot.Models
 {
     public class User
     {
-        [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public string Id { get; set; }
-        [JsonProperty("team_id")]
+        [JsonPropertyName("team_id")]
         public string TeamId { get; set; }
-        [JsonProperty("name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
-        [JsonProperty("profile")]
+        [JsonPropertyName("profile")]
         public Profile Profile { get; set; }
-        [JsonProperty("is_admin")]
+        [JsonPropertyName("is_admin")]
         public bool IsAdmin { get; set; }
-        [JsonProperty("is_owner")]
+        [JsonPropertyName("is_owner")]
         public bool IsOwner { get; set; }
-        [JsonProperty("is_primary_owner")]
+        [JsonPropertyName("is_primary_owner")]
         public bool IsPrimaryOwner { get; set; }
     }
 }

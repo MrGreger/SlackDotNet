@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 using SlackBot.Blocks.BaseBlocks;
 
 namespace SlackBot.Blocks
@@ -7,9 +7,9 @@ namespace SlackBot.Blocks
     public class RichTextBlock : BlockBase
     {
         public override string Type => BlockTypes.RichText;
-        [JsonProperty("block_id")]
+        [JsonPropertyName("block_id")]
         public string BlockId { get; set; }
-        [JsonProperty("elements")]
+        [JsonPropertyName("elements")]
         public List<RichTextSectionBase> Elements { get; set; } = new List<RichTextSectionBase>();
     }
 }

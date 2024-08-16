@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace SlackBot.Blocks.Elements
 {
@@ -9,19 +9,19 @@ namespace SlackBot.Blocks.Elements
         {
             public class TriggerInputParameter
             {
-                [JsonProperty("name")]
+                [JsonPropertyName("name")]
                 public string Name { get; set; }
-                [JsonProperty("value")]
+                [JsonPropertyName("value")]
                 public string Value { get; set; }
             }
             
-            [JsonProperty("url")]
+            [JsonPropertyName("url")]
             public string Url { get; set; }
-            [JsonProperty("customizable_input_parameters")]
+            [JsonPropertyName("customizable_input_parameters")]
             public List<TriggerInputParameter> InputParameters { get; set; } = new List<TriggerInputParameter>();
         }
         
-        [JsonProperty("trigger")]
+        [JsonPropertyName("trigger")]
         public WorkflowTrigger Trigger { get; set; }
     }
 }

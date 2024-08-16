@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 using SlackBot.Blocks.BaseBlocks;
 using SlackBot.Blocks.Elements;
 
@@ -11,11 +11,11 @@ namespace SlackBot.Blocks
     {
         public override string Type => BlockTypes.Section;
 
-        [JsonProperty("text")]
+        [JsonPropertyName("text")]
         public TextAttribute Text { get; set; }
-        [JsonProperty("fields")]
+        [JsonPropertyName("fields")]
         public List<TextAttribute> Fields { get; set; } = new List<TextAttribute>();
-        [JsonProperty("accessory")]
+        [JsonPropertyName("accessory")]
         public ISectionElement Accessory { get; set; }
     }
 }

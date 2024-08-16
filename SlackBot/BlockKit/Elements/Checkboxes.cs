@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,15 +12,15 @@ namespace SlackBot.Blocks.Checkbox
     public class Checkboxes : ElementBase, ISectionElement, IActionsElement, IInputElement
     {
         public override string Type => ElementTypes.CheckBoxes;
-        [JsonProperty("options")]
+        [JsonPropertyName("options")]
         public IList<InputOption> Options { get; set; }
-        [JsonProperty("initial_options")]
+        [JsonPropertyName("initial_options")]
         public IList<InputOption> InitialOptions { get; set; }
-        [JsonProperty("action_id")]
+        [JsonPropertyName("action_id")]
         public string ActionId { get; set; }
-        [JsonProperty("focus_on_load")]
+        [JsonPropertyName("focus_on_load")]
         public bool FocusOnLoad { get; set; }
-        [JsonProperty("confirm")]
+        [JsonPropertyName("confirm")]
         public ConfirmationDialog ConfirmationDialog { get; set; }
     }
 }

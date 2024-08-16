@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,13 +7,13 @@ namespace SlackBot.Blocks.Checkbox
 {
     public class InputOption : IOptionPayload
     {
-        [JsonProperty("text")]
+        [JsonPropertyName("text")]
         public TextAttribute Text { get; set; }
-        [JsonProperty("description")]
+        [JsonPropertyName("description")]
         public TextAttribute Description { get; set; }
-        [JsonProperty("url")]
+        [JsonPropertyName("url")]
         public string Url { get; set; }
-        [JsonProperty("value")]
+        [JsonPropertyName("value")]
         public string Value { get; set; }
     }
 }

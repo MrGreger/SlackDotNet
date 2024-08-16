@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 using SlackBot.Blocks.BaseBlocks;
 
 namespace SlackBot.Blocks.Elements
@@ -12,15 +12,15 @@ namespace SlackBot.Blocks.Elements
         }
         
         public override string Type => ElementTypes.WorkflowButton;
-        [JsonProperty("action_id")]
+        [JsonPropertyName("action_id")]
         public string ActionId { get; set; }
-        [JsonProperty("text")]
+        [JsonPropertyName("text")]
         public PlainText Text { get; set; }
-        [JsonProperty("workflow")]
+        [JsonPropertyName("workflow")]
         public Workflow Workflow { get; set; }
-        [JsonProperty("style")]
+        [JsonPropertyName("style")]
         public string Style { get; set; }
-        [JsonProperty("accessibility_label")]
+        [JsonPropertyName("accessibility_label")]
         public string AccessibilityLabel { get; set; }
     }
 }

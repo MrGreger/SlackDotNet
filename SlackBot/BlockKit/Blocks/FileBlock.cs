@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 using SlackBot.Blocks.BaseBlocks;
 
 namespace SlackBot.Blocks
@@ -7,9 +7,9 @@ namespace SlackBot.Blocks
     {
         public override string Type => BlockTypes.File;
         
-        [JsonProperty("external_id")]
+        [JsonPropertyName("external_id")]
         public string ExternalId { get; set; }
-        [JsonProperty("source")]
+        [JsonPropertyName("source")]
         public string Source { get; set; } = "remote";
     }
 }

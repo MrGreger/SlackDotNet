@@ -1,14 +1,14 @@
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace SlackBot.Blocks
 {
     public class RichTextPreformatted : RichTextSectionBase
     {
         public override string Type => RichTextSectionTypes.PreformatedSection;
-        [JsonProperty("elements")]
+        [JsonPropertyName("elements")]
         public List<RichTextElementBase> Elements { get; set; } = new List<RichTextElementBase>();
-        [JsonProperty("border")]
+        [JsonPropertyName("border")]
         public int Border { get; set; }
     }
 }

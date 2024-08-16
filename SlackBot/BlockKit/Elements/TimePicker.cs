@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 using SlackBot.Blocks.BaseBlocks;
 using SlackBot.Blocks.Dialog;
 
@@ -7,17 +7,17 @@ namespace SlackBot.Blocks.Elements
     public class TimePicker : ElementBase, ISectionElement, IActionsElement, IInputElement
     {
         public override string Type => ElementTypes.TimePicker;
-        [JsonProperty("action_id")]
+        [JsonPropertyName("action_id")]
         public string ActionId { get; set; }
-        [JsonProperty("initial_value")]
+        [JsonPropertyName("initial_value")]
         public string InitialValue { get; set; }
-        [JsonProperty("confirm")]
+        [JsonPropertyName("confirm")]
         public ConfirmationDialog ConfirmationDialog { get; set; }
-        [JsonProperty("focus_on_load")]
+        [JsonPropertyName("focus_on_load")]
         public bool FocusOnLoad { get; set; }
-        [JsonProperty("placeholder")]
+        [JsonPropertyName("placeholder")]
         public PlainText Placeholder { get; set; }
-        [JsonProperty("timezone")]
+        [JsonPropertyName("timezone")]
         public string Timezone { get; set; }
     }
 }

@@ -1,18 +1,18 @@
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace SlackBot.Blocks.Dialog
 {
     public class ConfirmationDialog
     {
-        [JsonProperty("title")]
+        [JsonPropertyName("title")]
         public PlainText Title { get; set; }
-        [JsonProperty("text")]
+        [JsonPropertyName("text")]
         public PlainText Text { get; set; }
-        [JsonProperty("confirm")]
+        [JsonPropertyName("confirm")]
         public PlainText Confirm { get; set; }
-        [JsonProperty("deny")]
+        [JsonPropertyName("deny")]
         public PlainText Deny { get; set; }
-        [JsonProperty("style")]
+        [JsonPropertyName("style")]
         public string Style { get; set; }
     }
 }

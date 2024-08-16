@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,7 +7,7 @@ namespace SlackBot.Models
 {
     public class Profile
     {
-        [JsonProperty("real_name")]
+        [JsonPropertyName("real_name")]
         public string RealName { get; set; }
     }
 }

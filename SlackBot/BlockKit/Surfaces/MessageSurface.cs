@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -33,11 +33,6 @@ namespace SlackBot.Blocks
         {
             _blocks.Remove(element);
             return this;
-        }
-
-        public string Serialize()
-        {
-            return JsonConvert.SerializeObject(_blocks, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
         }
     }
 }

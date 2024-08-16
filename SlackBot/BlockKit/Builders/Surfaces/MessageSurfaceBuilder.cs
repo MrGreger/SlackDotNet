@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using SlackBot.Blocks.BaseBlocks;
 using SlackBot.BlockKit.Builders.Blocks;
 using SlackBot.Blocks.Builders.RichText;
+using SlackBot.Helpers;
 
 namespace SlackBot.Blocks.Builders
 {
@@ -120,6 +123,11 @@ namespace SlackBot.Blocks.Builders
             _container.Add(blockBuilder.Build());
 
             return this;
+        }
+
+        public string Build()
+        {
+            return SlackSerialization.Serialize(_container);
         }
     }
 }

@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 using SlackBot.Blocks.BaseBlocks;
 
 namespace SlackBot.Blocks
@@ -6,23 +6,23 @@ namespace SlackBot.Blocks
     public class VideoBlock : BlockBase
     {
         public override string Type => BlockTypes.Video;
-        [JsonProperty("alt_text")]
+        [JsonPropertyName("alt_text")]
         public string AltText { get; set; }      
-        [JsonProperty("author_name")]
+        [JsonPropertyName("author_name")]
         public string AuthorName { get; set; }       
-        [JsonProperty("description")]
+        [JsonPropertyName("description")]
         public PlainText Description { get; set; }
-        [JsonProperty("provider_icon_url")]
+        [JsonPropertyName("provider_icon_url")]
         public string ProviderIconUrl { get; set; }    
-        [JsonProperty("provider_name")]
+        [JsonPropertyName("provider_name")]
         public string ProviderName { get; set; }   
-        [JsonProperty("title")]
+        [JsonPropertyName("title")]
         public PlainText Title { get; set; }
-        [JsonProperty("title_url")]
+        [JsonPropertyName("title_url")]
         public string TitleUrl { get; set; }   
-        [JsonProperty("thumbnail_url")]
+        [JsonPropertyName("thumbnail_url")]
         public string ThumbnailUrl { get; set; } 
-        [JsonProperty("video_url")]
+        [JsonPropertyName("video_url")]
         public string VideoUrl { get; set; }   
     }
 }

@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 using SlackBot.Blocks.BaseBlocks;
 
 namespace SlackBot.Blocks.Elements
@@ -6,11 +6,11 @@ namespace SlackBot.Blocks.Elements
     public class FileInput : ElementBase, IInputElement
     {
         public override string Type => ElementTypes.FileInput;
-        [JsonProperty("action_id")]
+        [JsonPropertyName("action_id")]
         public string ActionId { get; set; }
-        [JsonProperty("filetypes")]
+        [JsonPropertyName("filetypes")]
         public string[] FileTypes { get; set; }
-        [JsonProperty("max_files")]
+        [JsonPropertyName("max_files")]
         public int MaxFiles { get; set; }
     }
 }

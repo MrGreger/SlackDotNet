@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,7 +8,7 @@ namespace SlackBot.Messaging
 {
     public class UsersListResult : SlackResponseBase<IEnumerable<User>>
     {
-        [JsonProperty("members")]
+        [JsonPropertyName("members")]
         public override IEnumerable<User> Content { get; set; }
     }
 }

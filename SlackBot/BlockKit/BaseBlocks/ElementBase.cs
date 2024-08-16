@@ -1,10 +1,10 @@
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace SlackBot.Blocks.BaseBlocks
 {
     public abstract class ElementBase
     {
-        [JsonProperty("type")]
+        [JsonPropertyName("type")]
         public abstract string Type { get; }
     }
 }

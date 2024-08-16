@@ -1,29 +1,29 @@
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace SlackBot.Blocks
 {
     public class LinkElementStyle
     {
-        [JsonProperty("bold")]
+        [JsonPropertyName("bold")]
         public bool Bold { get; set; }
-        [JsonProperty("italic")]
+        [JsonPropertyName("italic")]
         public bool Italic { get; set; }
-        [JsonProperty("strike")]
+        [JsonPropertyName("strike")]
         public bool Strike { get; set; }
-        [JsonProperty("code")]
+        [JsonPropertyName("code")]
         public bool Code { get; set; }
     }
     
     public class LinkElement : RichTextElementBase
     {
         public override string Type => RichTextElementTypes.Link;
-        [JsonProperty("url")]
+        [JsonPropertyName("url")]
         public string Url { get; set; }
-        [JsonProperty("text")]
+        [JsonPropertyName("text")]
         public string Text { get; set; }
-        [JsonProperty("unsafe")]
+        [JsonPropertyName("unsafe")]
         public bool Unsafe { get; set; }        
-        [JsonProperty("style")]
+        [JsonPropertyName("style")]
         public LinkElementStyle Style { get; set; }
     }
 }

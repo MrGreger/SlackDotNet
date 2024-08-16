@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,17 +16,17 @@ namespace SlackBot.Blocks
         }
 
         public override string Type => ElementTypes.Button;
-        [JsonProperty("text")]
+        [JsonPropertyName("text")]
         public PlainText Content { get; set; }
-        [JsonProperty("action_id")]
+        [JsonPropertyName("action_id")]
         public string ActionId { get; set; }
-        [JsonProperty("url")]
+        [JsonPropertyName("url")]
         public string Url { get; set; }
-        [JsonProperty("value")]
+        [JsonPropertyName("value")]
         public string Value { get; set; }
-        [JsonProperty("style")]
+        [JsonPropertyName("style")]
         public string Style { get; set; }
-        [JsonProperty("accessibility_label")]
+        [JsonPropertyName("accessibility_label")]
         public string AccessibilityLabel { get; set; }
     }
 }

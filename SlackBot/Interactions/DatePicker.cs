@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,13 +9,13 @@ namespace SlackBot.Interactions.Elements
     {
         public class DatePickerAction
         {
-            [JsonProperty("selected_date")]
+            [JsonPropertyName("selected_date")]
             public DateTime? SelectedDate { get; set; }
-            [JsonProperty("type")]
+            [JsonPropertyName("type")]
             public string Type { get; set; }
         }
 
-        [JsonProperty("datepicker-action")]
+        [JsonPropertyName("datepicker-action")]
         public DatePickerAction InputAction { get; set; }
 
         public DateTime? SelectedDate => InputAction.SelectedDate;
