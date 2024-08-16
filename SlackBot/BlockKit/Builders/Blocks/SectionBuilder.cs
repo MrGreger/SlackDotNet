@@ -151,7 +151,7 @@ namespace SlackBot.Blocks.Builders
 
         public ISectionConfigurator WithField(Action<ITextObjectConfigurator> configurator)
         {
-            if (_section != null && _section.Fields.Count >= 10)
+            if (_section.Fields != null && _section.Fields.Count >= 10)
             {
                 throw new Exception("Max 10 elements");
             }
