@@ -11,7 +11,8 @@ namespace SlackBot.Helpers
         public static JsonSerializerOptions SerializerOptions = new JsonSerializerOptions()
                                                                 {
                                                                     DefaultIgnoreCondition =
-                                                                        JsonIgnoreCondition.WhenWritingNull
+                                                                        JsonIgnoreCondition.WhenWritingNull,
+                                                                    WriteIndented = true
                                                                 };
 
         public static T Deserialize<T>(string text)

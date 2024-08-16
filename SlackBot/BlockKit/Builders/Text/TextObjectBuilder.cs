@@ -4,7 +4,7 @@ namespace SlackBot.Blocks.Builders.Text
 {
     public interface ITextConfiguratorBase<T>
     {
-        T Emoji(bool emoji = true);
+        T WithEmoji(bool emoji = true);
         T WithText(string text);
     }
 
@@ -41,7 +41,7 @@ namespace SlackBot.Blocks.Builders.Text
                     };
         }
 
-        public IPlainTextConfigurator Emoji(bool emoji = true)
+        public IPlainTextConfigurator WithEmoji(bool emoji = true)
         {
             _text.Emoji = emoji;
             return this;
@@ -72,7 +72,7 @@ namespace SlackBot.Blocks.Builders.Text
                     };
         }
 
-        public IMarkdownConfigurator Emoji(bool emoji = true)
+        public IMarkdownConfigurator WithEmoji(bool emoji = true)
         {
             _text.Emoji = emoji;
             return this;
